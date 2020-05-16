@@ -1,0 +1,4485 @@
+{
+  "@type": "type.googleapis.com/google.cloud.videointelligence.v1.AnnotateVideoResponse",
+  "annotationResults": [
+    {
+      "inputUri": "/videoattempt1/videoplayback.mp4",
+      "segment": {
+        "endTimeOffset": "332.933333s",
+        "startTimeOffset": "0s"
+      },
+      "segmentLabelAnnotations": [
+        {
+          "entity": {
+            "description": "ball",
+            "entityId": "/m/018xm",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.9625343,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "sports",
+              "entityId": "/m/06ntj",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "ball game",
+            "entityId": "/m/020m7t",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.87070465,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "sports",
+              "entityId": "/m/06ntj",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "team sport",
+            "entityId": "/m/03x045",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.8120488,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "people",
+              "entityId": "/m/09g5pq",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "audience",
+            "entityId": "/m/033lpr",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.95363855,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "ball",
+              "entityId": "/m/018xm",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "football",
+            "entityId": "/m/01226z",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.8890434,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "manchester united f.c.",
+            "entityId": "/m/050fh",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.34656212,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "kick",
+            "entityId": "/m/090f96",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.9451821,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "location",
+              "entityId": "/m/078x4m",
+              "languageCode": "en-US"
+            },
+            {
+              "description": "structure",
+              "entityId": "/m/0n68_",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "sport venue",
+            "entityId": "/m/0bmgjqz",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.54139805,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "player",
+              "entityId": "/m/02vzx9",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "goalkeeper",
+            "entityId": "/m/0lvcs",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.39245045,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "games",
+            "entityId": "/m/03bt1gh",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.8632352,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "event",
+              "entityId": "/m/081pkj",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "tournament",
+            "entityId": "/m/012sbd",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.5879929,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "sports",
+            "entityId": "/m/06ntj",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.92188114,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "ball",
+              "entityId": "/m/018xm",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "ball",
+            "entityId": "/m/0dpm1v",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.9613049,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "soccer player",
+            "entityId": "/m/0pcq81q",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.95208955,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "sports",
+              "entityId": "/m/06ntj",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "soccer",
+            "entityId": "/m/02vx4",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.84822905,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "player",
+            "entityId": "/m/02vzx9",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.9622125,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "sports equipment",
+            "entityId": "/m/05y5lj",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.8278874,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "people",
+            "entityId": "/m/09g5pq",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.7984745,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "people",
+              "entityId": "/m/09g5pq",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "crowd",
+            "entityId": "/m/03qtwd",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.980308,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "location",
+              "entityId": "/m/078x4m",
+              "languageCode": "en-US"
+            },
+            {
+              "description": "structure",
+              "entityId": "/m/0n68_",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "stadium",
+            "entityId": "/m/019cfy",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.94466716,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "net",
+            "entityId": "/m/02qdwbp",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.722327,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "location",
+              "entityId": "/m/078x4m",
+              "languageCode": "en-US"
+            },
+            {
+              "description": "structure",
+              "entityId": "/m/0n68_",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "arena",
+            "entityId": "/m/018lrm",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.8860607,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "soccer kick",
+            "entityId": "/m/0b9qm2",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.8967858,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "football player",
+            "entityId": "/m/0gl2ny2",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.96996236,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "goal",
+            "entityId": "/m/023t5p",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.9371829,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "stadium",
+              "entityId": "/m/019cfy",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "soccer specific stadium",
+            "entityId": "/m/0404y4",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.9505186,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        }
+      ],
+      "shotLabelAnnotations": [
+        {
+          "categoryEntities": [
+            {
+              "description": "soccer",
+              "entityId": "/m/02vx4",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "indoor soccer",
+            "entityId": "/m/02c3nd",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.3719546,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "grass",
+              "entityId": "/m/08t9c_",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "artificial turf",
+            "entityId": "/m/04bzth",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.38801497,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "graphics",
+              "entityId": "/m/021sdg",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "red",
+            "entityId": "/m/0dwx7",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.6661089,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.6299203,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "320s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "sports",
+              "entityId": "/m/06ntj",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "ball game",
+            "entityId": "/m/020m7t",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.36392882,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.8179473,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.7764743,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.8647351,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.7894055,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.8179473,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.78428,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.8647351,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.34198254,
+              "segment": {
+                "endTimeOffset": "62.800s",
+                "startTimeOffset": "59.933333s"
+              }
+            },
+            {
+              "confidence": 0.82858926,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.8647351,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.74341714,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.74341714,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.81634086,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.36392882,
+              "segment": {
+                "endTimeOffset": "152.100s",
+                "startTimeOffset": "150s"
+              }
+            },
+            {
+              "confidence": 0.74341714,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.776852,
+              "segment": {
+                "endTimeOffset": "183.033333s",
+                "startTimeOffset": "180s"
+              }
+            },
+            {
+              "confidence": 0.8179473,
+              "segment": {
+                "endTimeOffset": "185.166666s",
+                "startTimeOffset": "183.066666s"
+              }
+            },
+            {
+              "confidence": 0.56488925,
+              "segment": {
+                "endTimeOffset": "188.233333s",
+                "startTimeOffset": "185.200s"
+              }
+            },
+            {
+              "confidence": 0.78428,
+              "segment": {
+                "endTimeOffset": "190.666666s",
+                "startTimeOffset": "188.266666s"
+              }
+            },
+            {
+              "confidence": 0.63061607,
+              "segment": {
+                "endTimeOffset": "203.833333s",
+                "startTimeOffset": "190.700s"
+              }
+            },
+            {
+              "confidence": 0.81155807,
+              "segment": {
+                "endTimeOffset": "209.400s",
+                "startTimeOffset": "203.866666s"
+              }
+            },
+            {
+              "confidence": 0.7201523,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            },
+            {
+              "confidence": 0.7201523,
+              "segment": {
+                "endTimeOffset": "224.433333s",
+                "startTimeOffset": "220.433333s"
+              }
+            },
+            {
+              "confidence": 0.78428,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.74341714,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.7201523,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            },
+            {
+              "confidence": 0.78428,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "yellow",
+            "entityId": "/m/090f96",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.3241625,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.9451821,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.9451821,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.9451821,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.90182453,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.7989611,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.90582967,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.9451821,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.8375956,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.7070541,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.7070541,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.67167103,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.67167103,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.65963966,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.5017039,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "people",
+              "entityId": "/m/09g5pq",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "audience",
+            "entityId": "/m/033lpr",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.4861922,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.48499903,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.9255218,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.4571553,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.93912816,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.7124355,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.54600924,
+              "segment": {
+                "endTimeOffset": "149.966666s",
+                "startTimeOffset": "146.500s"
+              }
+            },
+            {
+              "confidence": 0.50325954,
+              "segment": {
+                "endTimeOffset": "152.100s",
+                "startTimeOffset": "150s"
+              }
+            },
+            {
+              "confidence": 0.54600924,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            },
+            {
+              "confidence": 0.43229768,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "player",
+              "entityId": "/m/02vzx9",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "goalkeeper",
+            "entityId": "/m/0lvcs",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.7342735,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.54583323,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.7342735,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.39245045,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.39245045,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.67780924,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.3309439,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.4323782,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "brand",
+            "entityId": "/m/01cd9",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.37393785,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "320s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "games",
+            "entityId": "/m/03bt1gh",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.8422964,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.93306375,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.8632352,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.90830487,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.93306375,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.9249918,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.56111795,
+              "segment": {
+                "endTimeOffset": "49.966666s",
+                "startTimeOffset": "49.200s"
+              }
+            },
+            {
+              "confidence": 0.9724763,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.9249918,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.73868346,
+              "segment": {
+                "endTimeOffset": "62.800s",
+                "startTimeOffset": "59.933333s"
+              }
+            },
+            {
+              "confidence": 0.8632352,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.87081945,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.8422964,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.8632352,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.8422964,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.8632352,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.68011034,
+              "segment": {
+                "endTimeOffset": "183.033333s",
+                "startTimeOffset": "180s"
+              }
+            },
+            {
+              "confidence": 0.68011034,
+              "segment": {
+                "endTimeOffset": "190.666666s",
+                "startTimeOffset": "188.266666s"
+              }
+            },
+            {
+              "confidence": 0.40789342,
+              "segment": {
+                "endTimeOffset": "209.400s",
+                "startTimeOffset": "203.866666s"
+              }
+            },
+            {
+              "confidence": 0.8632352,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.8422964,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.6792992,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            },
+            {
+              "confidence": 0.6059065,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "organization",
+              "entityId": "/m/0qb7t",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "team",
+            "entityId": "/m/011l78",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.57585794,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "player",
+            "entityId": "/m/02vzx9",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.966792,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.9979782,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.95071083,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.9972676,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.9965302,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.99839884,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.5681054,
+              "segment": {
+                "endTimeOffset": "49.966666s",
+                "startTimeOffset": "49.200s"
+              }
+            },
+            {
+              "confidence": 0.99791557,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.9949277,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.96500415,
+              "segment": {
+                "endTimeOffset": "62.800s",
+                "startTimeOffset": "59.933333s"
+              }
+            },
+            {
+              "confidence": 0.9840072,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.9959513,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.9959513,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.9889293,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.9840072,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.9840072,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.9840072,
+              "segment": {
+                "endTimeOffset": "183.033333s",
+                "startTimeOffset": "180s"
+              }
+            },
+            {
+              "confidence": 0.9622125,
+              "segment": {
+                "endTimeOffset": "185.166666s",
+                "startTimeOffset": "183.066666s"
+              }
+            },
+            {
+              "confidence": 0.90585643,
+              "segment": {
+                "endTimeOffset": "188.233333s",
+                "startTimeOffset": "185.200s"
+              }
+            },
+            {
+              "confidence": 0.94499046,
+              "segment": {
+                "endTimeOffset": "190.666666s",
+                "startTimeOffset": "188.266666s"
+              }
+            },
+            {
+              "confidence": 0.90585643,
+              "segment": {
+                "endTimeOffset": "203.833333s",
+                "startTimeOffset": "190.700s"
+              }
+            },
+            {
+              "confidence": 0.94499046,
+              "segment": {
+                "endTimeOffset": "209.400s",
+                "startTimeOffset": "203.866666s"
+              }
+            },
+            {
+              "confidence": 0.94499046,
+              "segment": {
+                "endTimeOffset": "224.433333s",
+                "startTimeOffset": "220.433333s"
+              }
+            },
+            {
+              "confidence": 0.9815582,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.99096245,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.8904726,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            },
+            {
+              "confidence": 0.9840072,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "night",
+            "entityId": "/m/01d74z",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.38950476,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "sports equipment",
+            "entityId": "/m/05y5lj",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.34959292,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.8499147,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.6568283,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.6601422,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.7446453,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.7733847,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.8082616,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.6151988,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.6672543,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.34959292,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "stadium",
+              "entityId": "/m/019cfy",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "soccer specific stadium",
+            "entityId": "/m/0404y4",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.47377342,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.37494588,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.9442353,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.8828903,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.7805629,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.8603334,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.66704303,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.94199926,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.95499724,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.7191211,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.760934,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.3841299,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.7653766,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.760934,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.37494588,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.8272694,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "cheering",
+            "entityId": "/m/053hz1",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.52024746,
+              "segment": {
+                "endTimeOffset": "149.966666s",
+                "startTimeOffset": "146.500s"
+              }
+            },
+            {
+              "confidence": 0.5348803,
+              "segment": {
+                "endTimeOffset": "152.100s",
+                "startTimeOffset": "150s"
+              }
+            },
+            {
+              "confidence": 0.51303035,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "artwork",
+              "entityId": "/m/0dgsmq8",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "graphics",
+            "entityId": "/m/021sdg",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.442509,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.72246104,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "320s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "plant",
+              "entityId": "/m/05s2s",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "grass",
+            "entityId": "/m/08t9c_",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.7478569,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.57889426,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.31227097,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.60372484,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.7478569,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.47950393,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.41643834,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.39018568,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.5196256,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.37687534,
+              "segment": {
+                "endTimeOffset": "183.033333s",
+                "startTimeOffset": "180s"
+              }
+            },
+            {
+              "confidence": 0.39018568,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.31234112,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.39398187,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "forward",
+            "entityId": "/m/02sdk9v",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.3914191,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "organization",
+              "entityId": "/m/0qb7t",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "community",
+            "entityId": "/m/01qls",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.37358478,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.37358478,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "football player",
+            "entityId": "/m/0gl2ny2",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.42140856,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.5284694,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.5284694,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.97347593,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.9179519,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.9571916,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.9179519,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.9179519,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.9630308,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.98065585,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.9179519,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.87854856,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.7319194,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.8825737,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.814698,
+              "segment": {
+                "endTimeOffset": "183.033333s",
+                "startTimeOffset": "180s"
+              }
+            },
+            {
+              "confidence": 0.7962829,
+              "segment": {
+                "endTimeOffset": "185.166666s",
+                "startTimeOffset": "183.066666s"
+              }
+            },
+            {
+              "confidence": 0.814698,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.83531845,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.5284694,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            },
+            {
+              "confidence": 0.87854856,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "black",
+            "entityId": "/m/019sc",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.5235546,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.44739267,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "320s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "ball",
+              "entityId": "/m/018xm",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "football",
+            "entityId": "/m/01226z",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.46169144,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.9384036,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.7608646,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.82951605,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.5502231,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.7780577,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.8508474,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.9384036,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.64370537,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.64370537,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.64370537,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.64370537,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.64370537,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.62927103,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.64370537,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "social group",
+            "entityId": "/m/01b4q9",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.66341424,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.56753653,
+              "segment": {
+                "endTimeOffset": "149.966666s",
+                "startTimeOffset": "146.500s"
+              }
+            },
+            {
+              "confidence": 0.5739637,
+              "segment": {
+                "endTimeOffset": "152.100s",
+                "startTimeOffset": "150s"
+              }
+            },
+            {
+              "confidence": 0.605347,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "location",
+              "entityId": "/m/078x4m",
+              "languageCode": "en-US"
+            },
+            {
+              "description": "structure",
+              "entityId": "/m/0n68_",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "sport venue",
+            "entityId": "/m/0bmgjqz",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.8044725,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.8669799,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.8979619,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.57257193,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.5760694,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.5036743,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.59515697,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.8669799,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.73157185,
+              "segment": {
+                "endTimeOffset": "62.800s",
+                "startTimeOffset": "59.933333s"
+              }
+            },
+            {
+              "confidence": 0.54139805,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.66255206,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.54139805,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.59014755,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.54139805,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.54139805,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.34321305,
+              "segment": {
+                "endTimeOffset": "183.033333s",
+                "startTimeOffset": "180s"
+              }
+            },
+            {
+              "confidence": 0.3935849,
+              "segment": {
+                "endTimeOffset": "185.166666s",
+                "startTimeOffset": "183.066666s"
+              }
+            },
+            {
+              "confidence": 0.84271646,
+              "segment": {
+                "endTimeOffset": "203.833333s",
+                "startTimeOffset": "190.700s"
+              }
+            },
+            {
+              "confidence": 0.37881637,
+              "segment": {
+                "endTimeOffset": "224.433333s",
+                "startTimeOffset": "220.433333s"
+              }
+            },
+            {
+              "confidence": 0.45582902,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.4544365,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.36411962,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            },
+            {
+              "confidence": 0.64186573,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "manchester united f.c.",
+            "entityId": "/m/050fh",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.43129703,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.3309958,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "sports game",
+            "entityId": "/m/022dc6",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.32465643,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "sports",
+              "entityId": "/m/06ntj",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "team sport",
+            "entityId": "/m/03x045",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.6155687,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.9409641,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.676773,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.82860076,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.90955764,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.90115315,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.953628,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.7798011,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.6106844,
+              "segment": {
+                "endTimeOffset": "62.800s",
+                "startTimeOffset": "59.933333s"
+              }
+            },
+            {
+              "confidence": 0.8111296,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.8394308,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.953628,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.953628,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.82860076,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.30731916,
+              "segment": {
+                "endTimeOffset": "152.100s",
+                "startTimeOffset": "150s"
+              }
+            },
+            {
+              "confidence": 0.9520539,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.82860076,
+              "segment": {
+                "endTimeOffset": "183.033333s",
+                "startTimeOffset": "180s"
+              }
+            },
+            {
+              "confidence": 0.96488076,
+              "segment": {
+                "endTimeOffset": "185.166666s",
+                "startTimeOffset": "183.066666s"
+              }
+            },
+            {
+              "confidence": 0.6286309,
+              "segment": {
+                "endTimeOffset": "188.233333s",
+                "startTimeOffset": "185.200s"
+              }
+            },
+            {
+              "confidence": 0.7798011,
+              "segment": {
+                "endTimeOffset": "190.666666s",
+                "startTimeOffset": "188.266666s"
+              }
+            },
+            {
+              "confidence": 0.7798011,
+              "segment": {
+                "endTimeOffset": "203.833333s",
+                "startTimeOffset": "190.700s"
+              }
+            },
+            {
+              "confidence": 0.932399,
+              "segment": {
+                "endTimeOffset": "209.400s",
+                "startTimeOffset": "203.866666s"
+              }
+            },
+            {
+              "confidence": 0.7798011,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            },
+            {
+              "confidence": 0.9176881,
+              "segment": {
+                "endTimeOffset": "224.433333s",
+                "startTimeOffset": "220.433333s"
+              }
+            },
+            {
+              "confidence": 0.9224176,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.90002745,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.7371778,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            },
+            {
+              "confidence": 0.9520539,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "soccer",
+              "entityId": "/m/02vx4",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "arena football",
+            "entityId": "/m/01hrk6",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.45347273,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.60107225,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.4287364,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.6223622,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.37979564,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.37979564,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.60107225,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "interaction",
+            "entityId": "/m/01ckgp",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.77145404,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.4091927,
+              "segment": {
+                "endTimeOffset": "212.800s",
+                "startTimeOffset": "209.433333s"
+              }
+            },
+            {
+              "confidence": 0.6928791,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "text",
+            "entityId": "/m/07s6nbt",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.7325865,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.6449603,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "320s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "red card foul",
+            "entityId": "/m/06ntj",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.7335296,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.98714507,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.8566574,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.9622703,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.9785403,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.98324627,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.3822903,
+              "segment": {
+                "endTimeOffset": "49.966666s",
+                "startTimeOffset": "49.200s"
+              }
+            },
+            {
+              "confidence": 0.98389554,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.98389554,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.6994671,
+              "segment": {
+                "endTimeOffset": "62.800s",
+                "startTimeOffset": "59.933333s"
+              }
+            },
+            {
+              "confidence": 0.94370925,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.96414214,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.98714507,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.98714507,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.9883284,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.46659976,
+              "segment": {
+                "endTimeOffset": "149.966666s",
+                "startTimeOffset": "146.500s"
+              }
+            },
+            {
+              "confidence": 0.569516,
+              "segment": {
+                "endTimeOffset": "152.100s",
+                "startTimeOffset": "150s"
+              }
+            },
+            {
+              "confidence": 0.98714507,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.99342966,
+              "segment": {
+                "endTimeOffset": "183.033333s",
+                "startTimeOffset": "180s"
+              }
+            },
+            {
+              "confidence": 0.98714507,
+              "segment": {
+                "endTimeOffset": "185.166666s",
+                "startTimeOffset": "183.066666s"
+              }
+            },
+            {
+              "confidence": 0.96782553,
+              "segment": {
+                "endTimeOffset": "188.233333s",
+                "startTimeOffset": "185.200s"
+              }
+            },
+            {
+              "confidence": 0.9785403,
+              "segment": {
+                "endTimeOffset": "190.666666s",
+                "startTimeOffset": "188.266666s"
+              }
+            },
+            {
+              "confidence": 0.98714507,
+              "segment": {
+                "endTimeOffset": "203.833333s",
+                "startTimeOffset": "190.700s"
+              }
+            },
+            {
+              "confidence": 0.98390716,
+              "segment": {
+                "endTimeOffset": "209.400s",
+                "startTimeOffset": "203.866666s"
+              }
+            },
+            {
+              "confidence": 0.96684754,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            },
+            {
+              "confidence": 0.98714507,
+              "segment": {
+                "endTimeOffset": "224.433333s",
+                "startTimeOffset": "220.433333s"
+              }
+            },
+            {
+              "confidence": 0.98324627,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.98714507,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.9821094,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            },
+            {
+              "confidence": 0.98389554,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "ball",
+              "entityId": "/m/018xm",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "ball",
+            "entityId": "/m/0dpm1v",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.9657791,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.758293,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.85560524,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.9355972,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.9355972,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.9613049,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.8173955,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.6674716,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.82167494,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.6674716,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.6674716,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.6674716,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.394244,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "software",
+              "entityId": "/m/01mf0",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "font",
+            "entityId": "/m/03gq5hm",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.6149624,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.6075982,
+              "segment": {
+                "endTimeOffset": "332.933333s",
+                "startTimeOffset": "320s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "people",
+              "entityId": "/m/09g5pq",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "crowd",
+            "entityId": "/m/03qtwd",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.6223902,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.66887534,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.9636796,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.58562464,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.37227157,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.9672377,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.8770138,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.5680251,
+              "segment": {
+                "endTimeOffset": "149.966666s",
+                "startTimeOffset": "146.500s"
+              }
+            },
+            {
+              "confidence": 0.5680251,
+              "segment": {
+                "endTimeOffset": "152.100s",
+                "startTimeOffset": "150s"
+              }
+            },
+            {
+              "confidence": 0.5680251,
+              "segment": {
+                "endTimeOffset": "203.833333s",
+                "startTimeOffset": "190.700s"
+              }
+            },
+            {
+              "confidence": 0.5680251,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            },
+            {
+              "confidence": 0.5017533,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "facial expression",
+            "entityId": "/m/01k74n",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.40761462,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "location",
+              "entityId": "/m/078x4m",
+              "languageCode": "en-US"
+            },
+            {
+              "description": "structure",
+              "entityId": "/m/0n68_",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "stadium",
+            "entityId": "/m/019cfy",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.35669252,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.6193671,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.536008,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.90197897,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.76976395,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.5850384,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.5744179,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.5744179,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.9237157,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.9443207,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.51191145,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.9208073,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.9237157,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.6264344,
+              "segment": {
+                "endTimeOffset": "203.833333s",
+                "startTimeOffset": "190.700s"
+              }
+            },
+            {
+              "confidence": 0.92571265,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.9443207,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "net",
+            "entityId": "/m/02qdwbp",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.89938426,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.49843025,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.8975101,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.8078998,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "sports",
+              "entityId": "/m/06ntj",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "soccer",
+            "entityId": "/m/02vx4",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.5075952,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.9897911,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.84822905,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.8742511,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.9587971,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.9698686,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.961684,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.91599715,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.6848897,
+              "segment": {
+                "endTimeOffset": "62.800s",
+                "startTimeOffset": "59.933333s"
+              }
+            },
+            {
+              "confidence": 0.88419485,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.88419485,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.9897165,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.961684,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.8742511,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.9587971,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.9321051,
+              "segment": {
+                "endTimeOffset": "183.033333s",
+                "startTimeOffset": "180s"
+              }
+            },
+            {
+              "confidence": 0.88419485,
+              "segment": {
+                "endTimeOffset": "185.166666s",
+                "startTimeOffset": "183.066666s"
+              }
+            },
+            {
+              "confidence": 0.6531083,
+              "segment": {
+                "endTimeOffset": "190.666666s",
+                "startTimeOffset": "188.266666s"
+              }
+            },
+            {
+              "confidence": 0.87712306,
+              "segment": {
+                "endTimeOffset": "203.833333s",
+                "startTimeOffset": "190.700s"
+              }
+            },
+            {
+              "confidence": 0.7351471,
+              "segment": {
+                "endTimeOffset": "209.400s",
+                "startTimeOffset": "203.866666s"
+              }
+            },
+            {
+              "confidence": 0.6848897,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            },
+            {
+              "confidence": 0.76296216,
+              "segment": {
+                "endTimeOffset": "224.433333s",
+                "startTimeOffset": "220.433333s"
+              }
+            },
+            {
+              "confidence": 0.8982147,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.9545724,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.84822905,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            },
+            {
+              "confidence": 0.9006683,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "people",
+            "entityId": "/m/09g5pq",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.8494171,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.68419933,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.64141524,
+              "segment": {
+                "endTimeOffset": "149.966666s",
+                "startTimeOffset": "146.500s"
+              }
+            },
+            {
+              "confidence": 0.64141524,
+              "segment": {
+                "endTimeOffset": "152.100s",
+                "startTimeOffset": "150s"
+              }
+            },
+            {
+              "confidence": 0.46747264,
+              "segment": {
+                "endTimeOffset": "203.833333s",
+                "startTimeOffset": "190.700s"
+              }
+            },
+            {
+              "confidence": 0.31426355,
+              "segment": {
+                "endTimeOffset": "212.800s",
+                "startTimeOffset": "209.433333s"
+              }
+            },
+            {
+              "confidence": 0.66226345,
+              "segment": {
+                "endTimeOffset": "220.400s",
+                "startTimeOffset": "212.833333s"
+              }
+            },
+            {
+              "confidence": 0.31426355,
+              "segment": {
+                "endTimeOffset": "224.433333s",
+                "startTimeOffset": "220.433333s"
+              }
+            },
+            {
+              "confidence": 0.46747264,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "soccer kick",
+            "entityId": "/m/0b9qm2",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.93792194,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.6596917,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.76272446,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.4175796,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.7123555,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.75749576,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.8967858,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.92709947,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.6596917,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.89848137,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.559035,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.44763616,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.44763616,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "soccer player",
+            "entityId": "/m/0pcq81q",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.95208955,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.95208955,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.95208955,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.95208955,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.95208955,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.95208955,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.95208955,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.9014389,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.9376954,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.9014389,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.9014389,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.5477113,
+              "segment": {
+                "endTimeOffset": "183.033333s",
+                "startTimeOffset": "180s"
+              }
+            },
+            {
+              "confidence": 0.9014389,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.8539776,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.5477113,
+              "segment": {
+                "endTimeOffset": "279.666666s",
+                "startTimeOffset": "250.900s"
+              }
+            },
+            {
+              "confidence": 0.9195369,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "goal",
+            "entityId": "/m/023t5p",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.9371829,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.9240202,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.9371829,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.89511025,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.56298196,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.9371829,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.9371829,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.3704171,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.8659002,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.81712526,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.7741242,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.3704171,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.828679,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "sports",
+              "entityId": "/m/06ntj",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "rugby football",
+            "entityId": "/m/06bqd",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.34222117,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "event",
+              "entityId": "/m/081pkj",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "tournament",
+            "entityId": "/m/012sbd",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.37714157,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.4207181,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.4207181,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.33510208,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "ball",
+            "entityId": "/m/018xm",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.5462424,
+              "segment": {
+                "endTimeOffset": "5.900s",
+                "startTimeOffset": "0s"
+              }
+            },
+            {
+              "confidence": 0.76983094,
+              "segment": {
+                "endTimeOffset": "7.433333s",
+                "startTimeOffset": "5.933333s"
+              }
+            },
+            {
+              "confidence": 0.732939,
+              "segment": {
+                "endTimeOffset": "16.566666s",
+                "startTimeOffset": "7.466666s"
+              }
+            },
+            {
+              "confidence": 0.9685391,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.781328,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.9688052,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.6294712,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.9514147,
+              "segment": {
+                "endTimeOffset": "59.900s",
+                "startTimeOffset": "52.633333s"
+              }
+            },
+            {
+              "confidence": 0.5240523,
+              "segment": {
+                "endTimeOffset": "62.800s",
+                "startTimeOffset": "59.933333s"
+              }
+            },
+            {
+              "confidence": 0.9393248,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.9625343,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.9090786,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            },
+            {
+              "confidence": 0.59286964,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.8722972,
+              "segment": {
+                "endTimeOffset": "146.466666s",
+                "startTimeOffset": "132.966666s"
+              }
+            },
+            {
+              "confidence": 0.7390892,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.6294712,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.8284549,
+              "segment": {
+                "endTimeOffset": "250.866666s",
+                "startTimeOffset": "243.500s"
+              }
+            },
+            {
+              "confidence": 0.51608896,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "location",
+              "entityId": "/m/078x4m",
+              "languageCode": "en-US"
+            },
+            {
+              "description": "structure",
+              "entityId": "/m/0n68_",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "arena",
+            "entityId": "/m/018lrm",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.7571818,
+              "segment": {
+                "endTimeOffset": "39.966666s",
+                "startTimeOffset": "16.600s"
+              }
+            },
+            {
+              "confidence": 0.6143686,
+              "segment": {
+                "endTimeOffset": "44.866666s",
+                "startTimeOffset": "40s"
+              }
+            },
+            {
+              "confidence": 0.38149768,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            },
+            {
+              "confidence": 0.46444783,
+              "segment": {
+                "endTimeOffset": "52.600s",
+                "startTimeOffset": "50s"
+              }
+            },
+            {
+              "confidence": 0.72814745,
+              "segment": {
+                "endTimeOffset": "91.666666s",
+                "startTimeOffset": "62.833333s"
+              }
+            },
+            {
+              "confidence": 0.89510256,
+              "segment": {
+                "endTimeOffset": "114.266666s",
+                "startTimeOffset": "91.700s"
+              }
+            },
+            {
+              "confidence": 0.38149768,
+              "segment": {
+                "endTimeOffset": "132.933333s",
+                "startTimeOffset": "116.166666s"
+              }
+            },
+            {
+              "confidence": 0.38149768,
+              "segment": {
+                "endTimeOffset": "179.966666s",
+                "startTimeOffset": "152.133333s"
+              }
+            },
+            {
+              "confidence": 0.6143686,
+              "segment": {
+                "endTimeOffset": "243.466666s",
+                "startTimeOffset": "225s"
+              }
+            },
+            {
+              "confidence": 0.7571818,
+              "segment": {
+                "endTimeOffset": "319.966666s",
+                "startTimeOffset": "279.700s"
+              }
+            }
+          ]
+        },
+        {
+          "categoryEntities": [
+            {
+              "description": "person",
+              "entityId": "/m/01g317",
+              "languageCode": "en-US"
+            }
+          ],
+          "entity": {
+            "description": "play",
+            "entityId": "/m/06wtgq",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.3949235,
+              "segment": {
+                "endTimeOffset": "49.166666s",
+                "startTimeOffset": "44.900s"
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "description": "fifa",
+            "entityId": "/m/02_js1",
+            "languageCode": "en-US"
+          },
+          "segments": [
+            {
+              "confidence": 0.46189272,
+              "segment": {
+                "endTimeOffset": "116.133333s",
+                "startTimeOffset": "114.300s"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
