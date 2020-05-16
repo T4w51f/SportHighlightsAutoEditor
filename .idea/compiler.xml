@@ -20,7 +20,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="FootballAutoEditor" target="1.5" />
+      <module name="FootballAutoEditor" target="11.0.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
