@@ -64,6 +64,7 @@ public class VideoIntelligenceResponseParser {
                 entityDescription.toLowerCase().contains("red");
     }
 
+    //TODO - @t4w51f - Convert array indices from 1s differential to 5s
     private static ArrayList<TimeFrame> processTimeFrameList(ArrayList<TimeFrame> timeFramesList, String end){
         double endTimeOffset = Double.parseDouble(end.replace("s", ""));
         int endTimeCeiling = (int) Math.ceil(endTimeOffset);
