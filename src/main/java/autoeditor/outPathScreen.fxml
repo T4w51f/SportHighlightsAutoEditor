@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="290.0" style="-fx-background-color: #2e2e2e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="highlightGenerator" alignment="CENTER" layoutX="19.0" layoutY="108.0" onMouseClicked="#generateHighlight" prefHeight="74.0" prefWidth="252.0" style="-fx-background-color: grey; -fx-border-radius: 4; -fx-border-width: 0; -fx-text-fill: white; -fx-font-family: helvetica; -fx-font-style: normal; -fx-label-padding: 15; -fx-border-style: solid line-join bevel line-cap round; -fx-background-radius: 5;" text="Generate Highlights" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="26.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@downloadFile.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

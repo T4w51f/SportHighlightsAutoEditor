@@ -25,5 +25,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Maven: com.sun.jna:jna:3.0.9" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
