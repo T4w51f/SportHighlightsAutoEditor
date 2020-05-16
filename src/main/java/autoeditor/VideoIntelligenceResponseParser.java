@@ -3,19 +3,16 @@ package autoeditor;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class VideoIntelligenceResponseParser {
     public static ArrayList<TimeFrame> getTimeRanges(){
-        ArrayList<TimeFrame> timeRangeList = new ArrayList<>();
+        ArrayList<TimeFrame> initialTimeRangeList = new ArrayList<>();
+        ArrayList<TimeFrame> finalTimeRangeList = new ArrayList<>();
         JSONParser parser = new JSONParser();
-        double REF_CONFIDENCE_LEVEL = 0.90;
+        double REF_CONFIDENCE_LEVEL = 0.97;
 
         try{
             Object obj = parser.parse(new FileReader("D:\\SportHighlightsAutoEditor\\src\\main\\resources\\annotations.json"));
@@ -41,24 +38,69 @@ public class VideoIntelligenceResponseParser {
                             String startTime = (String) segment.get("startTimeOffset");
                             String endTime = (String) segment.get("endTimeOffset");
 
-                            TimeFrame timeFrame = new TimeFrame(startTime, endTime);
-                            timeRangeList.add(timeFrame);
+                            TimeFrame timeFrame = new TimeFrame(entityDescription, startTime, endTime, confidence);
+                            initialTimeRangeList.add(timeFrame);
                         }
                     }
                 }
             }
 
+            JSONObject entireVideoSegment = (JSONObject) zeroIndexVal.get("segment");
+            String entireVideoEnd = (String) entireVideoSegment.get("endTimeOffset");
+            finalTimeRangeList = processTimeFrameList(initialTimeRangeList, entireVideoEnd);
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        System.out.println(timeRangeList);
-        return timeRangeList;
+        return finalTimeRangeList;
     }
 
     private static boolean checkValidEntity(String entityDescription) {
         return entityDescription.toLowerCase().contains("goal") ||
+                entityDescription.toLowerCase().contains("score") ||
                 entityDescription.toLowerCase().contains("yellow") ||
                 entityDescription.toLowerCase().contains("red");
+    }
+
+    private static ArrayList<TimeFrame> processTimeFrameList(ArrayList<TimeFrame> timeFramesList, String end){
+        double endTimeOffset = Double.parseDouble(end.replace("s", ""));
+        int endTimeCeiling = (int) Math.ceil(endTimeOffset);
+        int[] timeFrameArray = new int[endTimeCeiling + 1];
+        ArrayList<TimeFrame> finalTimeFrameList = new ArrayList<>();
+
+        for(TimeFrame timeFrame : timeFramesList){
+            int frameStart = (int) Math.ceil(timeFrame.getStartTime());
+            int frameEnd = (int) Math.ceil(timeFrame.getEndTime());
+            timeFrameArray[frameStart]++;
+            timeFrameArray[frameEnd]--;
+        }
+
+        for(int i = 1; i < timeFrameArray.length; i++){
+            timeFrameArray[i] = timeFrameArray[i - 1] + timeFrameArray[i];
+        }
+
+        int finalStart = endTimeCeiling;
+        int finalEnd = 0;
+
+        for (int j = 0; j < timeFrameArray.length; j++) {
+
+            //mark the start
+            if(timeFrameArray[j] > 0 && finalStart == endTimeCeiling){
+                finalStart = j;
+            }
+
+            //mark the end
+            if(timeFrameArray[j] == 0 && finalStart < j){
+                finalEnd = j;
+                TimeFrame timeFrame = new TimeFrame(finalStart, finalEnd);
+                finalTimeFrameList.add(timeFrame);
+
+                finalStart = endTimeCeiling;
+            }
+        }
+
+        return finalTimeFrameList;
     }
 }
