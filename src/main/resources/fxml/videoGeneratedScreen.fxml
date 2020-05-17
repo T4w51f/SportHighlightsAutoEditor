@@ -13,7 +13,7 @@
       <Text fx:id="returnFileUpload" fill="WHITE" fontSmoothingType="LCD" layoutX="148.0" layoutY="281.0" onMouseClicked="#returnToFileUpload" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: helvetica;" text="Make Another Highlight" />
       <ImageView fitHeight="154.0" fitWidth="179.0" layoutX="86.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@checkmark.png" />
+            <Image url="@../checkmark.png" />
          </image>
       </ImageView>
       <Text fill="WHITE" fontSmoothingType="LCD" layoutX="28.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: helvetica; -fx-font-weight: bold;" text="The highlights of your video has been generated!" textAlignment="CENTER" wrappingWidth="239.73666381835938">

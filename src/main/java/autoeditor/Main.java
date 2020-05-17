@@ -7,11 +7,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import com.sun.jna.Pointer;
-import com.sun.jna.platform.win32.User32;
-import com.sun.jna.platform.win32.WinDef;
-import static com.sun.jna.platform.win32.WinUser.GWL_STYLE;
-
 public class Main extends Application {
 
     private double xOfffset = 0;
@@ -20,10 +15,10 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        Parent root = FXMLLoader.load(getClass().getResource("AutoEditorUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/AutoEditorUI.fxml"));
         primaryStage.setTitle("Video Highlights Generator");
         Scene scene = new Scene(root, 300, 275);
-        scene.getStylesheets().addAll(this.getClass().getResource("stylesheet.css").toExternalForm());
+        //scene.getStylesheets().addAll(this.getClass().getResource("css/stylesheet.css").toExternalForm());
 
         //grab root and move window
         root.setOnMousePressed(event -> {
@@ -39,6 +34,9 @@ public class Main extends Application {
         primaryStage.show();
         minimizeIconTray();
     }
+
+
+    //FIXME
     private static void minimizeIconTray(){
         long lhwnd = com.sun.glass.ui.Window.getWindows().get(0).getNativeWindow();
         Pointer lpVoid = new Pointer(lhwnd);

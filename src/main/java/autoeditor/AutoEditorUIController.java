@@ -1,17 +1,10 @@
 package autoeditor;
 
 import javafx.fxml.FXML;
-import javafx.event.Event;
-import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.control.Label;
-
-
-import java.awt.*;
-import java.io.IOException;
 
 
 public class AutoEditorUIController {
@@ -63,14 +56,14 @@ public class AutoEditorUIController {
     }
 
     private void generateHighLightScreen() {
-        //load generateHighlightScreen fxml onto a view
-        FXMLLoader emptyLoader = new FXMLLoader(getClass().getResource("../FXML/generateHighlightScreen.fxml"));
-        Pane pane = null;
-        try {
-            pane = emptyLoader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        diffPane.setCenter(pane);
+//        //load generateHighlightScreen fxml onto a view
+//        FXMLLoader emptyLoader = new FXMLLoader(getClass().getResource("/fxml/generateHighlightScreen.fxml"));
+//        Pane pane = null;
+//        try {
+//            pane = emptyLoader.load();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        diffPane.setCenter(pane);
     }
 }

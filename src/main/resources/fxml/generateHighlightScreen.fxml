@@ -17,7 +17,7 @@
       </Label>
       <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="26.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@downloadFile.png" />
+            <Image url="@../downloadFile.png" />
          </image>
       </ImageView>
    </children>
