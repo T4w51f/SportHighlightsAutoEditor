@@ -6,6 +6,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
+import lombok.Getter;
 
 import javax.swing.*;
 import java.io.File;
@@ -13,8 +14,11 @@ import java.io.File;
 
 public class AutoEditorUIController {
     private boolean DEBUG = true;
-    public File outDir;
-    public File inFile;
+
+
+    @Getter private static File outDir;
+
+    @Getter private static File inFile;
 
     @FXML
     private ImageView minButton;
@@ -76,4 +80,6 @@ public class AutoEditorUIController {
         outputFilePathFlag = false;
         Main.set_pane(1);
     }
+
+
 }

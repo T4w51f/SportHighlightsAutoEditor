@@ -4,6 +4,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
+import java.io.File;
+import java.util.ArrayList;
+
 public class generateHighlightScreenController {
     private boolean DEBUG = true;
 
@@ -23,6 +26,24 @@ public class generateHighlightScreenController {
     @FXML
     public void generateHighlight(javafx.scene.input.MouseEvent event) {
         event.getSource();
+
+        File outDir = AutoEditorUIController.getOutDir();
+        File inFile = AutoEditorUIController.getInFile();
+
+        String fileNameNoExtension = inFile.getName().substring(0,inFile.toString().lastIndexOf('.'));
+        String fileExtension =inFile.toString().substring(inFile.toString().lastIndexOf('.'));
+
+        String outputPath = outDir+"\\"+fileNameNoExtension+"_highlights"+fileExtension;
+
+        try{
+            ArrayList<TimeFrame> vidTimeFrames = VideoIntelligenceResponseParser.processVideo(inFile.getAbsolutePath() ,inFile.getName(), inFile.getName());
+            videoEditor.videoEditor.createHighlights(inFile.getAbsolutePath(), outputPath, vidTimeFrames);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Could not parse video");
+        }
+
         if (DEBUG) { System.out.println("Video has been generated");}
         highlightButtonFlag = true;
         videoGenScreen();

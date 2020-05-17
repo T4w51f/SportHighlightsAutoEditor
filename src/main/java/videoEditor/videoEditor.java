@@ -16,7 +16,7 @@ public class videoEditor {
     private static double FADE_DURATION = 0.5;
 
     //returns -1 if failed
-    public static int createHighlights(String filepath, String outputName, List<TimeFrame> sequences) {
+    public static int createHighlights(String filepath, String outputPath, List<TimeFrame> sequences) {
 
         DefaultFFMPEGLocator df = new DefaultFFMPEGLocator();
 
@@ -24,7 +24,7 @@ public class videoEditor {
 
         File in = new File(filepath);
 
-        String outputFilePath = in.getParent()+"\\"+outputName+filepath.substring(filepath.indexOf("."));
+        String outputFilePath = outputPath;
 
         ArrayList<String> cmd = new ArrayList<>();
         cmd.add(df.getFFMPEGExecutablePath());
