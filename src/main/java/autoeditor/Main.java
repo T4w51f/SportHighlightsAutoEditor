@@ -76,7 +76,7 @@ public class Main extends Application {
     public static void main(String[] args) throws IOException, GeneralSecurityException, InterruptedException {
         //launch(args);
         //VideoIntelligenceResponseParser.gcpVidTool();
-        ArrayList<TimeFrame> result = VideoIntelligenceResponseParser.processVideo("C:\\\\Users\\DELL\\Desktop\\GOHAN.mp4", "GOHAN.mp4", "lastSample");
+        ArrayList<TimeFrame> result = VideoIntelligenceResponseParser.processVideo("C:\\\\Users\\DELL\\Desktop\\GOHAN.mp4", "GOHAN.mp4", "tres");
 
         System.out.println(result);
     }
