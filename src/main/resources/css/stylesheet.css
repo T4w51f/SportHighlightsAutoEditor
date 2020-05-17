@@ -1,18 +1,18 @@
-#addFile:hover{
+#addFile: hover{
   -fx-font-weight: bold;
   -fx-opacity: 0.9;
   -fx-scale-x: 1.02;
   -fx-scale-y: 1.03;
   -fx-effect: dropshadow(three-pass-box, black, 10, 0, 0, 0);
 }
-#outputFileSelect:hover{
+#outputFileSelect: hover{
   -fx-font-weight: bold;
   -fx-opacity: 0.9;
   -fx-scale-x: 1.02;
   -fx-scale-y: 1.03;
   -fx-effect: dropshadow(three-pass-box, black, 10, 0, 0, 0);
 }
-#highlightGenerator:hover{
+#highlightGenerator: hover{
   -fx-font-weight: bold;
   -fx-opacity: 0.9;
   -fx-scale-x: 1.02;

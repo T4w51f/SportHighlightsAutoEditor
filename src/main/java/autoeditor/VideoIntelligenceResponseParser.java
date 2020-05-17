@@ -1,6 +1,10 @@
 package autoeditor;
 
 import com.google.api.gax.longrunning.OperationFuture;
+import com.google.api.gax.paging.Page;
+import com.google.cloud.storage.Bucket;
+import com.google.cloud.storage.Storage;
+import com.google.cloud.storage.StorageOptions;
 import com.google.cloud.videointelligence.v1.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -12,7 +16,7 @@ import java.util.ArrayList;
 
 public class VideoIntelligenceResponseParser {
     public static void gcpVidTool() throws IOException {
-        //authExplicit();
+        authImplicit();
         // Instantiate a com.google.cloud.videointelligence.v1.VideoIntelligenceServiceClient
         try (VideoIntelligenceServiceClient client = VideoIntelligenceServiceClient.create()) {
             // Provide path to file hosted on GCS as "gs://bucket-name/..."
@@ -89,19 +93,17 @@ public class VideoIntelligenceResponseParser {
         }
     }
 
-//    static void authExplicit() throws IOException {
-//        // You can specify a credential file by providing a path to GoogleCredentials.
-//        // Otherwise credentials are read from the GOOGLE_APPLICATION_CREDENTIALS environment variable.
-//        GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream("D:\\SportHighlightsAutoEditor\\src\\main\\java\\autoeditor\\My-First-Project-54179b3a642d.json"))
-//                .createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"));
-//        Storage storage = StorageOptions.newBuilder().setCredentials(credentials).build().getService();
-//
-//        System.out.println("Buckets:");
-//        Page<Bucket> buckets = storage.list();
-//        for (Bucket bucket : buckets.iterateAll()) {
-//            System.out.println(bucket.toString());
-//        }
-//    }
+    static void authImplicit() {
+        // If you don't specify credentials when constructing the client, the client library will
+        // look for credentials via the environment variable GOOGLE_APPLICATION_CREDENTIALS.
+        Storage storage = StorageOptions.getDefaultInstance().getService();
+
+        System.out.println("Buckets:");
+        Page<Bucket> buckets = storage.list();
+        for (Bucket bucket : buckets.iterateAll()) {
+            System.out.println(bucket.toString());
+        }
+    }
 
 
     public static ArrayList<TimeFrame> getTimeRanges(){
@@ -112,7 +114,7 @@ public class VideoIntelligenceResponseParser {
         int FRAME_FACTOR = 5;
 
         try{
-            Object obj = parser.parse(new FileReader("D:\\SportHighlightsAutoEditor\\src\\main\\resources\\annotations.json"));
+            Object obj = parser.parse(new FileReader("SportHighlightsAutoEditor\\src\\main\\resources\\annotations.json"));
             JSONObject jsonObject = (JSONObject) obj;
             JSONArray annotationResults = (JSONArray) jsonObject.get("annotationResults");
             JSONObject zeroIndexVal = (JSONObject) annotationResults.get(0);

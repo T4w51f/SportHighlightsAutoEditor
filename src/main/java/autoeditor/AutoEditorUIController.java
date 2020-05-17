@@ -4,10 +4,17 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
+
+import javax.swing.*;
+import java.io.File;
 
 
 public class AutoEditorUIController {
     private boolean DEBUG = true;
+    public File outDir;
+    public File inFile;
 
     @FXML
     private ImageView minButton;
@@ -30,21 +37,28 @@ public class AutoEditorUIController {
     @FXML
     public void selectInputFile(MouseEvent event) {
         event.getSource();
-        if (DEBUG) { System.out.println("A file has been selected as an input");}
-        inputFileFlag = true;
-        if (outputFilePathFlag){
-            generateHighLightScreen();
+        if (DEBUG) { System.out.println("A file is being selected as an input");}
+        final FileChooser fc = new FileChooser();
+        inFile = fc.showOpenDialog(Main.getPrimaryStage());
+        if (inFile != null) {
+            if (DEBUG) { System.out.println("A file has been selected as an input");}
+            inputFileFlag = true;
+            if (outputFilePathFlag) generateHighLightScreen();
         }
     }
 
     @FXML
     private void selectOutputFilePath(MouseEvent event) {
         event.getSource();
-        if (DEBUG) { System.out.println("A file path has been selected as an output");}
-        outputFilePathFlag = true;
-        if (inputFileFlag){
-            generateHighLightScreen();
+        if (DEBUG) { System.out.println("A file path is being selected as an output");}
+        final DirectoryChooser dc = new DirectoryChooser();
+        outDir = dc.showDialog(Main.getPrimaryStage());
+        if (outDir != null){
+            if (DEBUG) { System.out.println("A file has been selected as an input"); }
+            outputFilePathFlag = true;
+            if (inputFileFlag) generateHighLightScreen();
         }
+
     }
 
     @FXML

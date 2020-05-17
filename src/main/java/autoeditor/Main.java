@@ -5,23 +5,16 @@ import com.sun.jna.Pointer;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseDragEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
-import java.io.IOException;
-
 import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 import static com.sun.jna.platform.win32.WinUser.GWL_STYLE;
 
@@ -56,7 +49,6 @@ public class Main extends Application {
             primaryStage.setY(dragEvent.getScreenY() - pressEvent.getSceneY());
         }));
 
-
         primaryStage.setScene(scene);
         primaryStage.show();
         minimizeIconTray();
@@ -78,7 +70,7 @@ public class Main extends Application {
         user32.SetWindowLong(hwnd, GWL_STYLE, newStyle);
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         launch(args);
         //TODO: Ahnaf run this
         //VideoIntelligenceResponseParser.gcpVidTool();
