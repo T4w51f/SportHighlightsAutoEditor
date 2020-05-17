@@ -14,16 +14,18 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" />
+          <root url="jar://$MODULE_DIR$/../slf4j-nop-1.7.9.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" />
-        </SOURCES>
-        <jarDirectory url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" recursive="false" />
-        <jarDirectory url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" recursive="false" type="SOURCES" />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="library" name="Maven: com.sun.jna:jna:3.0.9" level="project" />
+    <orderEntry type="library" name="Maven: ws.schild:jave-core:2.7.3" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.26" level="project" />
+    <orderEntry type="library" name="Maven: ws.schild:jave-nativebin-win64:2.7.3" level="project" />
+    <orderEntry type="library" name="Maven: ws.schild:jave-nativebin-osx64:2.7.3" level="project" />
+    <orderEntry type="library" name="Maven: net.java.dev.jna:jna:5.5.0" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
