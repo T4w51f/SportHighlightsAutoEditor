@@ -5,42 +5,67 @@ import com.sun.jna.Pointer;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseDragEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
+import lombok.Getter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 import static com.sun.jna.platform.win32.WinUser.GWL_STYLE;
 
 public class Main extends Application {
+    private static AnchorPane root;
+    private static FXMLLoader loader;
+    private static List<Pane> paneList = new ArrayList<>();
 
-    private double xOfffset = 0;
+    private double xOffset = 0;
     private double yOffset = 0;
+    private static int current_page = 0;
+    @Getter
+    private static Stage primaryStage;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        Main.primaryStage = primaryStage;
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/AutoEditorUI.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/fxml/ParentPane.fxml"));
+        paneList.add(FXMLLoader.load(getClass().getResource("/fxml/AutoEditorUI.fxml")));
+        paneList.add(FXMLLoader.load(getClass().getResource("/fxml/generateHighlightScreen.fxml")));
+        paneList.add(FXMLLoader.load(getClass().getResource("/fxml/videoGeneratedScreen.fxml")));
+        root = loader.load();
+        root.getChildren().add(paneList.get(0));
         primaryStage.setTitle("Video Highlights Generator");
-        Scene scene = new Scene(root, 300, 275);
-        //scene.getStylesheets().addAll(this.getClass().getResource("css/stylesheet.css").toExternalForm());
+        Scene scene = new Scene(root, 382, 401);
+        scene.getStylesheets().addAll(this.getClass().getResource("/css/stylesheet.css").toExternalForm());
 
         //grab root and move window
-        root.setOnMousePressed(event -> {
-            xOfffset = event.getSceneX();
-            yOffset = event.getSceneY();
-        });
+        root.setOnMousePressed(pressEvent -> root.setOnMouseDragged(dragEvent -> {
+            primaryStage.setX(dragEvent.getScreenX() - pressEvent.getSceneX());
+            primaryStage.setY(dragEvent.getScreenY() - pressEvent.getSceneY());
+        }));
 
-        root.setOnMouseDragEntered(event -> {
-            primaryStage.setX(event.getScreenX() - xOfffset);
-            primaryStage.setY(event.getScreenY() - yOffset);
-        });
+
         primaryStage.setScene(scene);
         primaryStage.show();
         minimizeIconTray();
+    }
+
+    public static void set_pane(int page){
+        root.getChildren().remove(paneList.get(current_page));
+        root.getChildren().add(paneList.get(page));
+        current_page = page;
     }
 
     private static void minimizeIconTray(){
