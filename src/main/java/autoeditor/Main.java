@@ -11,6 +11,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
+
 import static com.sun.jna.platform.win32.WinUser.GWL_STYLE;
 
 public class Main extends Application {
@@ -51,7 +53,9 @@ public class Main extends Application {
         user32.SetWindowLong(hwnd, GWL_STYLE, newStyle);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         launch(args);
+        //TODO: Ahnaf run this
+        //VideoIntelligenceResponseParser.gcpVidTool();
     }
 }
