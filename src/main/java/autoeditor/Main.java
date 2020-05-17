@@ -74,10 +74,10 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) throws IOException, GeneralSecurityException, InterruptedException {
-        //launch(args);
+        launch(args);
         //VideoIntelligenceResponseParser.gcpVidTool();
-        ArrayList<TimeFrame> result = VideoIntelligenceResponseParser.processVideo("C:\\\\Users\\DELL\\Desktop\\GOHAN.mp4", "GOHAN.mp4", "ahnaf");
+        //ArrayList<TimeFrame> result = VideoIntelligenceResponseParser.processVideo("C:\\\\Users\\DELL\\Desktop\\GOHAN.mp4", "GOHAN.mp4", "ahnaf");
 
-        System.out.println(result);
+        //System.out.println(result);
     }
 }
