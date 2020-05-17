@@ -6,7 +6,6 @@ import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
@@ -25,9 +24,9 @@ import static com.sun.jna.platform.win32.WinUser.GWL_STYLE;
 public class Main extends Application {
     private static AnchorPane root;
     private static FXMLLoader loader;
-    private static List<Pane> paneList = new ArrayList<Pane>();
+    private static List<Pane> paneList = new ArrayList<>();
 
-    private double xOfffset = 0;
+    private double xOffset = 0;
     private double yOffset = 0;
     private static int current_page = 0;
     @Getter
@@ -38,25 +37,28 @@ public class Main extends Application {
         Main.primaryStage = primaryStage;
         primaryStage.initStyle(StageStyle.UNDECORATED);
         loader = new FXMLLoader(getClass().getResource("/fxml/ParentPane.fxml"));
-        paneList.add((Pane)FXMLLoader.load(getClass().getResource("/fxml/AutoEditorUI.fxml")));
-        paneList.add((Pane)FXMLLoader.load(getClass().getResource("/fxml/generateHighlightScreen.fxml")));
-        paneList.add((Pane)FXMLLoader.load(getClass().getResource("/fxml/videoGeneratedScreen.fxml")));
-        root = (AnchorPane) loader.load();
+        paneList.add(FXMLLoader.load(getClass().getResource("/fxml/AutoEditorUI.fxml")));
+        paneList.add(FXMLLoader.load(getClass().getResource("/fxml/generateHighlightScreen.fxml")));
+        paneList.add(FXMLLoader.load(getClass().getResource("/fxml/videoGeneratedScreen.fxml")));
+        root = loader.load();
         root.getChildren().add(paneList.get(0));
         primaryStage.setTitle("Video Highlights Generator");
         Scene scene = new Scene(root, 382, 401);
-        //scene.getStylesheets().addAll(this.getClass().getResource("css/stylesheet.css").toExternalForm());
+        scene.getStylesheets().addAll(this.getClass().getResource("/css/stylesheet.css").toExternalForm());
 
         //grab root and move window
+        //FIXME the drag and move does not work
         root.setOnMousePressed((MouseEvent mouseEvent) -> {
-            xOfffset = mouseEvent.getSceneX();
+            xOffset = mouseEvent.getSceneX();
             yOffset = mouseEvent.getSceneY();
         });
 
         root.setOnMouseDragEntered((MouseDragEvent mouseEvent) -> {
-            primaryStage.setX(mouseEvent.getScreenX() - xOfffset);
+            primaryStage.setX(mouseEvent.getScreenX() - xOffset);
             primaryStage.setY(mouseEvent.getScreenY() - yOffset);
         });
+
+
         primaryStage.setScene(scene);
         primaryStage.show();
         minimizeIconTray();
