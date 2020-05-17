@@ -16,7 +16,20 @@
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" />
+        </SOURCES>
+        <jarDirectory url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" recursive="false" />
+        <jarDirectory url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" scope="PROVIDED" name="Google App Engine Standard Local Server" level="application_server_libraries" />
     <orderEntry type="library" name="Maven: com.google.cloud:google-cloud-storage:1.107.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:29.0-android" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:failureaccess:1.0.1" level="project" />
@@ -47,13 +60,18 @@
     <orderEntry type="library" name="Maven: com.google.api.grpc:proto-google-iam-v1:0.13.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.11.4" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java-util:3.11.4" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
     <orderEntry type="library" name="Maven: org.threeten:threetenbp:1.4.3" level="project" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna:5.5.0" level="project" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna-platform:5.5.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.cloud:google-cloud-resourcemanager:0.117.2-alpha" level="project" />
+    <orderEntry type="library" name="Maven: com.google.apis:google-api-services-cloudresourcemanager:v1-rev20200210-1.30.9" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
+    <orderEntry type="library" name="Maven: com.squareup.okhttp:okhttp:2.7.5" level="project" />
+    <orderEntry type="library" name="Maven: com.squareup.okio:okio:1.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.json:json:20190722" level="project" />
     <orderEntry type="library" name="Maven: com.google.cloud:google-cloud-video-intelligence:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: io.grpc:grpc-api:1.29.0" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.mojo:animal-sniffer-annotations:1.18" level="project" />

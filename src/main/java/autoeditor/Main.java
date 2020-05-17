@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import lombok.Getter;
 
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +25,8 @@ public class Main extends Application {
     private static AnchorPane root;
     private static final List<Pane> paneList = new ArrayList<>();
 
+    private double xOffset = 0;
+    private double yOffset = 0;
     private static int current_page = 0;
     @Getter
     private static Stage primaryStage;
@@ -69,9 +73,11 @@ public class Main extends Application {
         user32.SetWindowLong(hwnd, GWL_STYLE, newStyle);
     }
 
-    public static void main(String[] args) {
-        launch(args);
-        //TODO: Ahnaf run this
+    public static void main(String[] args) throws IOException, GeneralSecurityException, InterruptedException {
+        //launch(args);
         //VideoIntelligenceResponseParser.gcpVidTool();
+        ArrayList<TimeFrame> result = VideoIntelligenceResponseParser.processVideo("C:\\\\Users\\DELL\\Desktop\\GOHAN.mp4", "GOHAN.mp4", "lastSample");
+
+        System.out.println(result);
     }
 }
