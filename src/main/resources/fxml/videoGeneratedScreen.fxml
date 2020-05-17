@@ -12,7 +12,7 @@
    <Text fx:id="returnFileUpload" fill="WHITE" fontSmoothingType="LCD" layoutX="127.0" layoutY="349.0" onMouseClicked="#returnToFileUpload" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: helvetica;" text="Make Another Highlight" />
    <ImageView fitHeight="154.0" fitWidth="179.0" layoutX="127.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../checkmark.png" />
+         <Image url="@../images/checkmark.png" />
       </image>
    </ImageView>
    <Text fill="WHITE" fontSmoothingType="LCD" layoutX="71.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: helvetica; -fx-font-weight: bold;" text="The highlights of your video has been generated!" textAlignment="CENTER" wrappingWidth="239.73666381835938">
@@ -25,12 +25,12 @@
          <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Video Highlights Generator" wrappingWidth="152.53673934936523" />
          <ImageView fx:id="minButton" fitHeight="17.0" fitWidth="25.0" layoutX="314.0" layoutY="11.0" onMouseClicked="#minimizeWindow" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../minimizeButton.png" />
+               <Image url="@../images/minimizeButton.png" />
             </image>
          </ImageView>
          <ImageView fx:id="closeButton" fitHeight="17.0" fitWidth="25.0" layoutX="351.0" layoutY="11.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../closeButton.png" />
+               <Image url="@../images/closeButton.png" />
             </image>
          </ImageView>
       </children>
