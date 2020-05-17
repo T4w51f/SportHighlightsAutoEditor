@@ -1,5 +1,6 @@
 package videoEditor;
 
+import autoeditor.TimeFrame;
 import javafx.util.Pair;
 import ws.schild.jave.*;
 
@@ -15,7 +16,7 @@ public class videoEditor {
     private static double FADE_DURATION = 0.5;
 
     //returns -1 if failed
-    public static int createHighlights(String filepath, String outputName, List<Pair<Integer, Integer>> sequences) {
+    public static int createHighlights(String filepath, String outputName, List<TimeFrame> sequences) {
 
         DefaultFFMPEGLocator df = new DefaultFFMPEGLocator();
 
@@ -39,12 +40,12 @@ public class videoEditor {
             String vSelect = "[0:v]";
             String aSelect = "[0:a]";
 
-            String startVal = sequences.get(i).getKey().toString();
-            String endVal = sequences.get(i).getValue().toString();
+            String startVal = String.valueOf(sequences.get(i).getStartTime());
+            String endVal = String.valueOf(sequences.get(i).getEndTime());
             String vNumber = "v"+String.valueOf(i);
             String aNumber = "a"+String.valueOf(i);
-            double FadeOutStart = sequences.get(i).getValue()-FADE_DURATION;
-            double FadeInStart = sequences.get(i).getKey();
+            double FadeOutStart = sequences.get(i).getStartTime()-FADE_DURATION;
+            double FadeInStart = sequences.get(i).getEndTime();
 
             String vFadeInStatement = "fade=t=in:st="+FadeInStart+":d="+FADE_DURATION;
             String vFadeOutStatement = "fade=t=out:st="+FadeOutStart+":d="+FADE_DURATION;
