@@ -71,9 +71,9 @@ public class Main extends Application {
         user32.SetWindowLong(hwnd, GWL_STYLE, newStyle);
     }
 
-    public static void main(String[] args) throws IOException {
-        //launch(args);
+    public static void main(String[] args) {
+        launch(args);
         //TODO: Ahnaf run this
-        VideoIntelligenceResponseParser.gcpVidTool();
+        //VideoIntelligenceResponseParser.gcpVidTool();
     }
 }

@@ -114,7 +114,7 @@ public class VideoIntelligenceResponseParser {
         int FRAME_FACTOR = 5;
 
         try{
-            Object obj = parser.parse(new FileReader("D:\\SportHighlightsAutoEditor\\src\\main\\resources\\annotations.json"));
+            Object obj = parser.parse(new FileReader("SportHighlightsAutoEditor\\src\\main\\resources\\annotations.json"));
             JSONObject jsonObject = (JSONObject) obj;
             JSONArray annotationResults = (JSONArray) jsonObject.get("annotationResults");
             JSONObject zeroIndexVal = (JSONObject) annotationResults.get(0);
