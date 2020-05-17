@@ -30,8 +30,8 @@ public class generateHighlightScreenController {
         File outDir = AutoEditorUIController.getOutDir();
         File inFile = AutoEditorUIController.getInFile();
 
-        String fileNameNoExtension = inFile.getName().substring(0,inFile.toString().lastIndexOf('.'));
-        String fileExtension =inFile.toString().substring(inFile.toString().lastIndexOf('.'));
+        String fileNameNoExtension = inFile.getName().substring(0,inFile.getName().lastIndexOf('.'));
+        String fileExtension =inFile.getName().substring(inFile.getName().lastIndexOf('.'));
 
         String outputPath = outDir+"\\"+fileNameNoExtension+"_highlights"+fileExtension;
 
