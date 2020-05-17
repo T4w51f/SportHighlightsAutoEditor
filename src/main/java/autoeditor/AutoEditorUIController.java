@@ -8,7 +8,6 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import lombok.Getter;
 
-import javax.swing.*;
 import java.io.File;
 
 
