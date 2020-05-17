@@ -13,6 +13,7 @@ public class VideoIntelligenceResponseParser {
         ArrayList<TimeFrame> finalTimeRangeList = new ArrayList<>();
         JSONParser parser = new JSONParser();
         double REF_CONFIDENCE_LEVEL = 0.97;
+        int FRAME_FACTOR = 5;
 
         try{
             Object obj = parser.parse(new FileReader("D:\\SportHighlightsAutoEditor\\src\\main\\resources\\annotations.json"));

@@ -1,9 +1,11 @@
 package autoeditor;
 
+import lombok.Getter;
+
 public class TimeFrame {
     private String entityDescription;
-    private double startTime;
-    private double endTime;
+    @Getter private double startTime;
+    @Getter private double endTime;
     private double confidence;
 
     public TimeFrame(String entityDescription, String startTime, String endTime, double confidence){
@@ -21,25 +23,5 @@ public class TimeFrame {
         this.startTime = (double) startTime;
         this.endTime = (double) endTime;
         this.confidence = 0;
-    }
-
-    public String getEntityDescription() {
-        return entityDescription;
-    }
-
-    public double getStartTime() {
-        return startTime;
-    }
-
-    public double getEndTime() {
-        return endTime;
-    }
-
-    public double length() {
-        return endTime - startTime;
-    }
-
-    public double getConfidence() {
-        return confidence;
     }
 }

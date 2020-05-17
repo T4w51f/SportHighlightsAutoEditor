@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.api.grpc:proto-google-cloud-video-intelligence-v1p2beta1:0.84.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/api/grpc/proto-google-cloud-video-intelligence-v1p2beta1/0.84.1/proto-google-cloud-video-intelligence-v1p2beta1-0.84.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/api/grpc/proto-google-cloud-video-intelligence-v1p2beta1/0.84.1/proto-google-cloud-video-intelligence-v1p2beta1-0.84.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/api/grpc/proto-google-cloud-video-intelligence-v1p2beta1/0.84.1/proto-google-cloud-video-intelligence-v1p2beta1-0.84.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
