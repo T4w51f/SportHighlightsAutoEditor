@@ -1,14 +1,9 @@
 package autoeditor;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-
-import java.io.IOException;
 
 
 public class AutoEditorUIController {
@@ -34,7 +29,7 @@ public class AutoEditorUIController {
 
     @FXML
     public void selectInputFile(MouseEvent event) {
-        Label labelClicked = (Label) event.getSource();
+        event.getSource();
         if (DEBUG) { System.out.println("A file has been selected as an input");}
         inputFileFlag = true;
         if (outputFilePathFlag){
@@ -44,7 +39,7 @@ public class AutoEditorUIController {
 
     @FXML
     private void selectOutputFilePath(MouseEvent event) {
-        Label labelClicked = (Label) event.getSource();
+        event.getSource();
         if (DEBUG) { System.out.println("A file path has been selected as an output");}
         outputFilePathFlag = true;
         if (inputFileFlag){

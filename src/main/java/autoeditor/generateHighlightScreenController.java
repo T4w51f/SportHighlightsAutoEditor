@@ -1,15 +1,8 @@
 package autoeditor;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.control.Label;
-
-import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.io.IOException;
+import javafx.scene.image.ImageView;
 
 public class generateHighlightScreenController {
     private boolean DEBUG = true;
@@ -20,8 +13,6 @@ public class generateHighlightScreenController {
     private ImageView closeButton;
     @FXML
     private Label highlightGenerator;
-    @FXML
-    private BorderPane thirdPageBorderPane;
 
     private boolean highlightButtonFlag = false;
 
@@ -31,7 +22,7 @@ public class generateHighlightScreenController {
     }
     @FXML
     public void generateHighlight(javafx.scene.input.MouseEvent event) {
-        Label labelClicked = (Label) event.getSource();
+        event.getSource();
         if (DEBUG) { System.out.println("Video has been generated");}
         highlightButtonFlag = true;
         videoGenScreen();
