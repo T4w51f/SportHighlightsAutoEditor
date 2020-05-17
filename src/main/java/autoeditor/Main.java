@@ -5,6 +5,7 @@ import com.sun.jna.Pointer;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseDragEvent;
@@ -18,6 +19,7 @@ import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 import static com.sun.jna.platform.win32.WinUser.GWL_STYLE;
 
@@ -47,16 +49,10 @@ public class Main extends Application {
         scene.getStylesheets().addAll(this.getClass().getResource("/css/stylesheet.css").toExternalForm());
 
         //grab root and move window
-        //FIXME the drag and move does not work
-        root.setOnMousePressed((MouseEvent mouseEvent) -> {
-            xOffset = mouseEvent.getSceneX();
-            yOffset = mouseEvent.getSceneY();
-        });
-
-        root.setOnMouseDragEntered((MouseDragEvent mouseEvent) -> {
-            primaryStage.setX(mouseEvent.getScreenX() - xOffset);
-            primaryStage.setY(mouseEvent.getScreenY() - yOffset);
-        });
+        root.setOnMousePressed(pressEvent -> root.setOnMouseDragged(dragEvent -> {
+            primaryStage.setX(dragEvent.getScreenX() - pressEvent.getSceneX());
+            primaryStage.setY(dragEvent.getScreenY() - pressEvent.getSceneY());
+        }));
 
 
         primaryStage.setScene(scene);
