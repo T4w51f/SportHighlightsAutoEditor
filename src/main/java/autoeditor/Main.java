@@ -7,6 +7,7 @@ import com.sun.jna.platform.win32.WinDef;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -46,6 +47,7 @@ public class Main extends Application {
             primaryStage.setY(dragEvent.getScreenY() - pressEvent.getSceneY());
         }));
 
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/highlightIcon.png")));
         primaryStage.setScene(scene);
         primaryStage.show();
         minimizeIconTray();
