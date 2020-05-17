@@ -76,7 +76,7 @@ public class VideoIntelligenceResponseParser {
         ArrayList<TimeFrame> initialTimeRangeList = new ArrayList<>();
         ArrayList<TimeFrame> finalTimeRangeList = new ArrayList<>();
         JSONParser parser = new JSONParser();
-        double REF_CONFIDENCE_LEVEL = 0.97;
+        double REF_CONFIDENCE_LEVEL = 0.90;
         int FRAME_FACTOR = 5;
 
         try{
@@ -98,8 +98,12 @@ public class VideoIntelligenceResponseParser {
 
                         if(confidence > REF_CONFIDENCE_LEVEL) {
                             JSONObject segment = (JSONObject) segmentObject.get("segment");
-                            String startTime = (String) segment.get("start_time_offset");
-                            String endTime = (String) segment.get("end_time_offset");
+
+                            JSONObject startTimeObject = (JSONObject) segment.get("start_time_offset");
+                            int startTime = (int) startTimeObject.get("seconds");
+
+                            JSONObject endTimeObject = (JSONObject) segment.get("end_time_offset");
+                            int endTime = (int) endTimeObject.get("seconds");
 
                             TimeFrame timeFrame = new TimeFrame(entityDescription, startTime, endTime, confidence);
                             initialTimeRangeList.add(timeFrame);
@@ -109,7 +113,8 @@ public class VideoIntelligenceResponseParser {
             }
 
             JSONObject entireVideoSegment = (JSONObject) zeroIndexVal.get("segment");
-            String entireVideoEnd = (String) entireVideoSegment.get("end_time_offset");
+            JSONObject entireVideoEndObject = (JSONObject) entireVideoSegment.get("end_time_offset");
+            int entireVideoEnd = (int) entireVideoEndObject.get("seconds");
             finalTimeRangeList = processTimeFrameList(initialTimeRangeList, entireVideoEnd);
 
 
@@ -128,10 +133,8 @@ public class VideoIntelligenceResponseParser {
     }
 
     //TODO - @t4w51f - Convert array indices from 1s differential to 5s
-    private static ArrayList<TimeFrame> processTimeFrameList(ArrayList<TimeFrame> timeFramesList, String end){
-        double endTimeOffset = Double.parseDouble(end.replace("s", ""));
-        int endTimeCeiling = (int) Math.ceil(endTimeOffset);
-        int[] timeFrameArray = new int[endTimeCeiling + 1];
+    private static ArrayList<TimeFrame> processTimeFrameList(ArrayList<TimeFrame> timeFramesList, int end){
+        int[] timeFrameArray = new int[end + 1];
         ArrayList<TimeFrame> finalTimeFrameList = new ArrayList<>();
 
         for(TimeFrame timeFrame : timeFramesList){
@@ -145,13 +148,13 @@ public class VideoIntelligenceResponseParser {
             timeFrameArray[i] = timeFrameArray[i - 1] + timeFrameArray[i];
         }
 
-        int finalStart = endTimeCeiling;
+        int finalStart = end;
         int finalEnd = 0;
 
         for (int j = 0; j < timeFrameArray.length; j++) {
 
             //mark the start
-            if(timeFrameArray[j] > 0 && finalStart == endTimeCeiling){
+            if(timeFrameArray[j] > 0 && finalStart == end){
                 finalStart = j;
             }
 
@@ -161,7 +164,7 @@ public class VideoIntelligenceResponseParser {
                 TimeFrame timeFrame = new TimeFrame(finalStart, finalEnd);
                 finalTimeFrameList.add(timeFrame);
 
-                finalStart = endTimeCeiling;
+                finalStart = end;
             }
         }
 
