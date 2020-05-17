@@ -22,8 +22,7 @@ import static com.sun.jna.platform.win32.WinUser.GWL_STYLE;
 
 public class Main extends Application {
     private static AnchorPane root;
-    private static FXMLLoader loader;
-    private static List<Pane> paneList = new ArrayList<>();
+    private static final List<Pane> paneList = new ArrayList<>();
 
     private double xOffset = 0;
     private double yOffset = 0;
@@ -35,7 +34,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Main.primaryStage = primaryStage;
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        loader = new FXMLLoader(getClass().getResource("/fxml/ParentPane.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ParentPane.fxml"));
         paneList.add(FXMLLoader.load(getClass().getResource("/fxml/AutoEditorUI.fxml")));
         paneList.add(FXMLLoader.load(getClass().getResource("/fxml/generateHighlightScreen.fxml")));
         paneList.add(FXMLLoader.load(getClass().getResource("/fxml/videoGeneratedScreen.fxml")));
@@ -50,7 +49,6 @@ public class Main extends Application {
             primaryStage.setX(dragEvent.getScreenX() - pressEvent.getSceneX());
             primaryStage.setY(dragEvent.getScreenY() - pressEvent.getSceneY());
         }));
-
 
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -75,7 +73,6 @@ public class Main extends Application {
 
     public static void main(String[] args) throws IOException, GeneralSecurityException, InterruptedException {
         //launch(args);
-        //TODO: Ahnaf run this
         //VideoIntelligenceResponseParser.gcpVidTool();
         ArrayList<TimeFrame> result = VideoIntelligenceResponseParser.processVideo();
 
