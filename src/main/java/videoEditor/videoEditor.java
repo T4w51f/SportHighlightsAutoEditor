@@ -1,5 +1,6 @@
 package videoEditor;
 
+import autoeditor.TimeFrame;
 import javafx.util.Pair;
 import ws.schild.jave.*;
 
@@ -11,7 +12,11 @@ import java.util.List;
 
 public class videoEditor {
 
-    public static int createHighlights(String filepath, String outputName, List<Pair<Integer, Integer>> sequences) {
+    //in seconds
+    private static double FADE_DURATION = 0.5;
+
+    //returns -1 if failed
+    public static int createHighlights(String filepath, String outputPath, List<TimeFrame> sequences) {
 
         DefaultFFMPEGLocator df = new DefaultFFMPEGLocator();
 
@@ -19,7 +24,7 @@ public class videoEditor {
 
         File in = new File(filepath);
 
-        String outputFilePath = in.getParent()+"\\"+outputName+filepath.substring(filepath.indexOf("."));
+        String outputFilePath = outputPath;
 
         ArrayList<String> cmd = new ArrayList<>();
         cmd.add(df.getFFMPEGExecutablePath());
@@ -32,13 +37,27 @@ public class videoEditor {
         StringBuilder aoutStatement = new StringBuilder();
 
         for(int i = 0; i < sequences.size(); i++) {
-            String startVal = sequences.get(i).getKey().toString();
-            String endVal = sequences.get(i).getValue().toString();
+            String vSelect = "[0:v]";
+            String aSelect = "[0:a]";
+
+            String startVal = String.valueOf(sequences.get(i).getStartTime());
+            String endVal = String.valueOf(sequences.get(i).getEndTime());
             String vNumber = "v"+String.valueOf(i);
             String aNumber = "a"+String.valueOf(i);
+            double FadeOutStart = sequences.get(i).getEndTime()-FADE_DURATION;
+            double FadeInStart = sequences.get(i).getStartTime();
 
-            String vStatement = "[0:v]trim=start="+startVal+":end="+endVal+",setpts=PTS-STARTPTS["+vNumber+"];";
-            String aStatement = "[0:a]atrim=start="+startVal+":end="+endVal+",asetpts=PTS-STARTPTS["+aNumber+"];";
+            String vFadeInStatement = "fade=t=in:st="+FadeInStart+":d="+FADE_DURATION;
+            String vFadeOutStatement = "fade=t=out:st="+FadeOutStart+":d="+FADE_DURATION;
+
+            String aFadeInStatement = "afade=t=in:st="+FadeInStart+":d="+FADE_DURATION;
+            String aFadeOutStatement = "afade=t=out:st="+FadeOutStart+":d="+FADE_DURATION;
+
+            String vTrimStatement = "trim=start="+startVal+":end="+endVal+",setpts=PTS-STARTPTS["+vNumber+"]";
+            String aTrimStatement = "atrim=start="+startVal+":end="+endVal+",asetpts=PTS-STARTPTS["+aNumber+"]";
+
+            String vStatement = vSelect+vFadeInStatement+","+vFadeOutStatement+","+vTrimStatement+";";
+            String aStatement = aSelect+aFadeInStatement+","+aFadeOutStatement+","+aTrimStatement+";";
 
             filterComplex.append(vStatement);
             filterComplex.append(aStatement);
