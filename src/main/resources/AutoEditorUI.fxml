@@ -19,7 +19,7 @@
       </Label>
       <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="79.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../java/autoeditor/addFile.png" />
+            <Image url="@addFile.png" />
          </image>
       </ImageView>
       <Label fx:id="outputFileSelect" alignment="CENTER" layoutX="62.0" layoutY="228.0" onMouseClicked="#selectOutputFilePath" prefHeight="74.0" prefWidth="252.0" style="-fx-background-color: grey; -fx-border-radius: 4; -fx-border-width: 0; -fx-text-fill: white; -fx-font-family: helvetica; -fx-font-style: normal; -fx-label-padding: 15; -fx-border-style: solid line-join bevel line-cap round; -fx-background-radius: 5;" text="Select Output File Location">
@@ -32,12 +32,12 @@
             <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Video Highlights Generator" wrappingWidth="152.53673934936523" />
             <ImageView fx:id="minButton" fitHeight="17.0" fitWidth="25.0" layoutX="314.0" layoutY="11.0" onMouseClicked="#minimizeWindow" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../java/autoeditor/minimizeButton.png" />
+                  <Image url="@minimizeButton.png" />
                </image>
             </ImageView>
             <ImageView fx:id="closeButton" fitHeight="17.0" fitWidth="25.0" layoutX="351.0" layoutY="11.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../java/autoeditor/closeButton.png" />
+                  <Image url="@closeButton.png" />
                </image>
             </ImageView>
          </children>
