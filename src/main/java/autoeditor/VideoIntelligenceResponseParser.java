@@ -1,13 +1,15 @@
 package autoeditor;
 
 import com.squareup.okhttp.*;
-import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import java.io.FileInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class VideoIntelligenceResponseParser {
@@ -64,20 +66,22 @@ public class VideoIntelligenceResponseParser {
     public static void uploadInputVideo(String AbsoluteInputPath, String bucket, String storageFileName) throws IOException {
         System.out.println("Uploading user input video to cloud storage");
 
-        FileInputStream fileInputStream = new FileInputStream(AbsoluteInputPath);
-        byte [] fileByteArr = IOUtils.toByteArray(fileInputStream);
+        String command =
+                "curl -X POST --data-binary @"+AbsoluteInputPath+" -H \"Content-Type: video/mp4\" \"https://storage.googleapis.com/upload/storage/v1/b/"+bucket+"/o?uploadType=media&name="+storageFileName+".mp4\"";
 
+        ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
+        processBuilder.directory(new File("C:\\Users\\"));
+        Process process = processBuilder.start();
+        InputStream inputStream = process.getInputStream();
 
-        OkHttpClient client = new OkHttpClient();
-        MediaType mediaType = MediaType.parse("video/mp4,video/mp4");
-        RequestBody body = RequestBody.create(mediaType, fileByteArr);
-        Request request = new Request.Builder()
-                .url("https://storage.googleapis.com/upload/storage/v1/b/"+bucket+"/o?uploadType=media&name="+storageFileName+".mp4")
-                .method("POST", body)
-                .addHeader("Content-Type", "video/mp4")
-                .addHeader("Content-Type", "video/mp4")
-                .build();
-        Response response = client.newCall(request).execute();
+        ByteArrayOutputStream result = new ByteArrayOutputStream();
+        byte[] buffer = new byte[1024];
+        int length;
+        while ((length = inputStream.read(buffer)) != -1) {
+            result.write(buffer, 0, length);
+        }
+
+        System.out.println(result.toString(StandardCharsets.UTF_8.name()));
     }
 
     public static Response postAnnotationRequest(String inputFile, String outputFile) throws IOException {
