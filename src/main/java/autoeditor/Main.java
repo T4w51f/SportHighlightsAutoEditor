@@ -11,6 +11,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
+import java.io.IOException;
+
 import lombok.Getter;
 
 import java.util.ArrayList;
@@ -70,7 +73,9 @@ public class Main extends Application {
         user32.SetWindowLong(hwnd, GWL_STYLE, newStyle);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         launch(args);
+        //TODO: Ahnaf run this
+        //VideoIntelligenceResponseParser.gcpVidTool();
     }
 }

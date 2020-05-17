@@ -1,13 +1,109 @@
 package autoeditor;
 
+import com.google.api.gax.longrunning.OperationFuture;
+import com.google.cloud.videointelligence.v1.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class VideoIntelligenceResponseParser {
+    public static void gcpVidTool() throws IOException {
+        //authExplicit();
+        // Instantiate a com.google.cloud.videointelligence.v1.VideoIntelligenceServiceClient
+        try (VideoIntelligenceServiceClient client = VideoIntelligenceServiceClient.create()) {
+            // Provide path to file hosted on GCS as "gs://bucket-name/..."
+            AnnotateVideoRequest request = AnnotateVideoRequest.newBuilder()
+                    .setInputUri("gs://videoattempt1/messi.mp4")
+                    .addFeatures(Feature.LABEL_DETECTION)
+                    .build();
+            // Create an operation that will contain the response when the operation completes.
+            OperationFuture<AnnotateVideoResponse, AnnotateVideoProgress> response =
+                    client.annotateVideoAsync(request);
+
+            System.out.println("Waiting for operation to complete...");
+            for (VideoAnnotationResults results : response.get().getAnnotationResultsList()) {
+                // process video / segment level label annotations
+                System.out.println("Locations: ");
+                for (LabelAnnotation labelAnnotation : results.getSegmentLabelAnnotationsList()) {
+                    System.out
+                            .println("Video label: " + labelAnnotation.getEntity().getDescription());
+                    // categories
+                    for (Entity categoryEntity : labelAnnotation.getCategoryEntitiesList()) {
+                        System.out.println("Video label category: " + categoryEntity.getDescription());
+                    }
+                    // segments
+                    for (LabelSegment segment : labelAnnotation.getSegmentsList()) {
+                        double startTime = segment.getSegment().getStartTimeOffset().getSeconds()
+                                + segment.getSegment().getStartTimeOffset().getNanos() / 1e9;
+                        double endTime = segment.getSegment().getEndTimeOffset().getSeconds()
+                                + segment.getSegment().getEndTimeOffset().getNanos() / 1e9;
+                        System.out.printf("Segment location: %.3f:%.3f\n", startTime, endTime);
+                        System.out.println("Confidence: " + segment.getConfidence());
+                    }
+                }
+
+                // process shot label annotations
+                for (LabelAnnotation labelAnnotation : results.getShotLabelAnnotationsList()) {
+                    System.out
+                            .println("Shot label: " + labelAnnotation.getEntity().getDescription());
+                    // categories
+                    for (Entity categoryEntity : labelAnnotation.getCategoryEntitiesList()) {
+                        System.out.println("Shot label category: " + categoryEntity.getDescription());
+                    }
+                    // segments
+                    for (LabelSegment segment : labelAnnotation.getSegmentsList()) {
+                        double startTime = segment.getSegment().getStartTimeOffset().getSeconds()
+                                + segment.getSegment().getStartTimeOffset().getNanos() / 1e9;
+                        double endTime = segment.getSegment().getEndTimeOffset().getSeconds()
+                                + segment.getSegment().getEndTimeOffset().getNanos() / 1e9;
+                        System.out.printf("Segment location: %.3f:%.3f\n", startTime, endTime);
+                        System.out.println("Confidence: " + segment.getConfidence());
+                    }
+                }
+
+                // process frame label annotations
+                for (LabelAnnotation labelAnnotation : results.getFrameLabelAnnotationsList()) {
+                    System.out
+                            .println("Frame label: " + labelAnnotation.getEntity().getDescription());
+                    // categories
+                    for (Entity categoryEntity : labelAnnotation.getCategoryEntitiesList()) {
+                        System.out.println("Frame label category: " + categoryEntity.getDescription());
+                    }
+                    // segments
+                    for (LabelSegment segment : labelAnnotation.getSegmentsList()) {
+                        double startTime = segment.getSegment().getStartTimeOffset().getSeconds()
+                                + segment.getSegment().getStartTimeOffset().getNanos() / 1e9;
+                        double endTime = segment.getSegment().getEndTimeOffset().getSeconds()
+                                + segment.getSegment().getEndTimeOffset().getNanos() / 1e9;
+                        System.out.printf("Segment location: %.3f:%.2f\n", startTime, endTime);
+                        System.out.println("Confidence: " + segment.getConfidence());
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+//    static void authExplicit() throws IOException {
+//        // You can specify a credential file by providing a path to GoogleCredentials.
+//        // Otherwise credentials are read from the GOOGLE_APPLICATION_CREDENTIALS environment variable.
+//        GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream("D:\\SportHighlightsAutoEditor\\src\\main\\java\\autoeditor\\My-First-Project-54179b3a642d.json"))
+//                .createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"));
+//        Storage storage = StorageOptions.newBuilder().setCredentials(credentials).build().getService();
+//
+//        System.out.println("Buckets:");
+//        Page<Bucket> buckets = storage.list();
+//        for (Bucket bucket : buckets.iterateAll()) {
+//            System.out.println(bucket.toString());
+//        }
+//    }
+
+
     public static ArrayList<TimeFrame> getTimeRanges(){
         ArrayList<TimeFrame> initialTimeRangeList = new ArrayList<>();
         ArrayList<TimeFrame> finalTimeRangeList = new ArrayList<>();
