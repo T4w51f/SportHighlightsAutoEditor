@@ -1,112 +1,78 @@
 package autoeditor;
 
-import com.google.api.gax.longrunning.OperationFuture;
-import com.google.api.gax.paging.Page;
-import com.google.cloud.storage.Bucket;
-import com.google.cloud.storage.Storage;
-import com.google.cloud.storage.StorageOptions;
-import com.google.cloud.videointelligence.v1.*;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import com.squareup.okhttp.*;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class VideoIntelligenceResponseParser {
-    public static void gcpVidTool() throws IOException {
-        authImplicit();
-        // Instantiate a com.google.cloud.videointelligence.v1.VideoIntelligenceServiceClient
-        try (VideoIntelligenceServiceClient client = VideoIntelligenceServiceClient.create()) {
-            // Provide path to file hosted on GCS as "gs://bucket-name/..."
-            AnnotateVideoRequest request = AnnotateVideoRequest.newBuilder()
-                    .setInputUri("gs://videoattempt1/messi.mp4")
-                    .addFeatures(Feature.LABEL_DETECTION)
-                    .build();
-            // Create an operation that will contain the response when the operation completes.
-            OperationFuture<AnnotateVideoResponse, AnnotateVideoProgress> response =
-                    client.annotateVideoAsync(request);
+    public static ArrayList<TimeFrame> processVideo() throws IOException, InterruptedException {
+        String inputFile = "videoplayback.mp4";
+        String bucket = "videoattempt1";
+        String object = "gommennasa.json";
+        int responseCode = 404;
+        Response getBucketItem;
 
-            System.out.println("Waiting for operation to complete...");
-            for (VideoAnnotationResults results : response.get().getAnnotationResultsList()) {
-                // process video / segment level label annotations
-                System.out.println("Locations: ");
-                for (LabelAnnotation labelAnnotation : results.getSegmentLabelAnnotationsList()) {
-                    System.out
-                            .println("Video label: " + labelAnnotation.getEntity().getDescription());
-                    // categories
-                    for (Entity categoryEntity : labelAnnotation.getCategoryEntitiesList()) {
-                        System.out.println("Video label category: " + categoryEntity.getDescription());
-                    }
-                    // segments
-                    for (LabelSegment segment : labelAnnotation.getSegmentsList()) {
-                        double startTime = segment.getSegment().getStartTimeOffset().getSeconds()
-                                + segment.getSegment().getStartTimeOffset().getNanos() / 1e9;
-                        double endTime = segment.getSegment().getEndTimeOffset().getSeconds()
-                                + segment.getSegment().getEndTimeOffset().getNanos() / 1e9;
-                        System.out.printf("Segment location: %.3f:%.3f\n", startTime, endTime);
-                        System.out.println("Confidence: " + segment.getConfidence());
-                    }
-                }
+        Response annotationOperation = postAnnotationRequest(inputFile, object);
 
-                // process shot label annotations
-                for (LabelAnnotation labelAnnotation : results.getShotLabelAnnotationsList()) {
-                    System.out
-                            .println("Shot label: " + labelAnnotation.getEntity().getDescription());
-                    // categories
-                    for (Entity categoryEntity : labelAnnotation.getCategoryEntitiesList()) {
-                        System.out.println("Shot label category: " + categoryEntity.getDescription());
-                    }
-                    // segments
-                    for (LabelSegment segment : labelAnnotation.getSegmentsList()) {
-                        double startTime = segment.getSegment().getStartTimeOffset().getSeconds()
-                                + segment.getSegment().getStartTimeOffset().getNanos() / 1e9;
-                        double endTime = segment.getSegment().getEndTimeOffset().getSeconds()
-                                + segment.getSegment().getEndTimeOffset().getNanos() / 1e9;
-                        System.out.printf("Segment location: %.3f:%.3f\n", startTime, endTime);
-                        System.out.println("Confidence: " + segment.getConfidence());
-                    }
-                }
+        do {
+            getBucketItem = getBucketResponse(bucket, object);
+            responseCode = getBucketItem.code();
+            Thread.sleep(5000);
+        } while (responseCode != 200);
 
-                // process frame label annotations
-                for (LabelAnnotation labelAnnotation : results.getFrameLabelAnnotationsList()) {
-                    System.out
-                            .println("Frame label: " + labelAnnotation.getEntity().getDescription());
-                    // categories
-                    for (Entity categoryEntity : labelAnnotation.getCategoryEntitiesList()) {
-                        System.out.println("Frame label category: " + categoryEntity.getDescription());
-                    }
-                    // segments
-                    for (LabelSegment segment : labelAnnotation.getSegmentsList()) {
-                        double startTime = segment.getSegment().getStartTimeOffset().getSeconds()
-                                + segment.getSegment().getStartTimeOffset().getNanos() / 1e9;
-                        double endTime = segment.getSegment().getEndTimeOffset().getSeconds()
-                                + segment.getSegment().getEndTimeOffset().getNanos() / 1e9;
-                        System.out.printf("Segment location: %.3f:%.2f\n", startTime, endTime);
-                        System.out.println("Confidence: " + segment.getConfidence());
-                    }
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        String mediaLinkResponse = getBucketItem.body().string();
+
+        JSONObject jsonObject = new JSONObject(mediaLinkResponse);
+
+        String mediaLink = (String) jsonObject.get("mediaLink");
+
+        Response labelResponse = getLabelResponse(mediaLink);
+        String labelString = labelResponse.body().string();
+        JSONObject labelJson = new JSONObject(labelString);
+
+        return getTimeRanges(labelJson);
     }
 
-    static void authImplicit() {
-        // If you don't specify credentials when constructing the client, the client library will
-        // look for credentials via the environment variable GOOGLE_APPLICATION_CREDENTIALS.
-        Storage storage = StorageOptions.getDefaultInstance().getService();
-
-        System.out.println("Buckets:");
-        Page<Bucket> buckets = storage.list();
-        for (Bucket bucket : buckets.iterateAll()) {
-            System.out.println(bucket.toString());
-        }
+    public static Response postAnnotationRequest(String inputFile, String outputFile) throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, "{\"inputUri\": \"gs://videoattempt1/"+inputFile+"\",\"outputUri\": \"gs://videoattempt1/"+outputFile+"\",\"features\": [\"LABEL_DETECTION\"]}");
+        Request request = new Request.Builder()
+                .url("https://videointelligence.googleapis.com/v1/videos:annotate?key=AIzaSyAuqtvuB_tpDRE3PqjoZ78lYwWK5ij7Wmc")
+                .method("POST", body)
+                .addHeader("Content-Type", "application/json")
+                .build();
+         Response response = client.newCall(request).execute();
+        return response;
     }
 
+    public static Response getBucketResponse(String bucket, String object) throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url("https://storage.googleapis.com/storage/v1/b/"+bucket+"/o/"+object)
+                .method("GET", null)
+                .build();
+        Response response = client.newCall(request).execute();
+        return response;
+    }
 
-    public static ArrayList<TimeFrame> getTimeRanges(){
+    public static Response getLabelResponse(String mediaLink) throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url(mediaLink)
+                .method("GET", null)
+                .build();
+        Response response = client.newCall(request).execute();
+
+        return response;
+    }
+
+    public static ArrayList<TimeFrame> getTimeRanges(JSONObject jsonObject){
         ArrayList<TimeFrame> initialTimeRangeList = new ArrayList<>();
         ArrayList<TimeFrame> finalTimeRangeList = new ArrayList<>();
         JSONParser parser = new JSONParser();
@@ -114,13 +80,11 @@ public class VideoIntelligenceResponseParser {
         int FRAME_FACTOR = 5;
 
         try{
-            Object obj = parser.parse(new FileReader("D:\\SportHighlightsAutoEditor\\src\\main\\resources\\annotations.json"));
-            JSONObject jsonObject = (JSONObject) obj;
-            JSONArray annotationResults = (JSONArray) jsonObject.get("annotationResults");
+            JSONArray annotationResults = (JSONArray) jsonObject.get("annotation_results");
             JSONObject zeroIndexVal = (JSONObject) annotationResults.get(0);
-            JSONArray shotLabelAnnotations = (JSONArray) zeroIndexVal.get("shotLabelAnnotations");
+            JSONArray shotLabelAnnotations = (JSONArray) zeroIndexVal.get("shot_label_annotations");
 
-            for (int i = 0; i < shotLabelAnnotations.size(); i++) {
+            for (int i = 0; i < shotLabelAnnotations.length(); i++) {
                 JSONObject entityObject = (JSONObject) shotLabelAnnotations.get(i);
                 JSONObject entityValue = (JSONObject) entityObject.get("entity");
                 String entityDescription = (String) entityValue.get("description");
@@ -128,14 +92,14 @@ public class VideoIntelligenceResponseParser {
                 if(checkValidEntity(entityDescription)){
                     JSONArray segments = (JSONArray) entityObject.get("segments");
 
-                    for (int j = 0; j < segments.size(); j++) {
+                    for (int j = 0; j < segments.length(); j++) {
                         JSONObject segmentObject = (JSONObject) segments.get(j);
                         double confidence = (double) segmentObject.get("confidence");
 
                         if(confidence > REF_CONFIDENCE_LEVEL) {
                             JSONObject segment = (JSONObject) segmentObject.get("segment");
-                            String startTime = (String) segment.get("startTimeOffset");
-                            String endTime = (String) segment.get("endTimeOffset");
+                            String startTime = (String) segment.get("start_time_offset");
+                            String endTime = (String) segment.get("end_time_offset");
 
                             TimeFrame timeFrame = new TimeFrame(entityDescription, startTime, endTime, confidence);
                             initialTimeRangeList.add(timeFrame);
@@ -145,7 +109,7 @@ public class VideoIntelligenceResponseParser {
             }
 
             JSONObject entireVideoSegment = (JSONObject) zeroIndexVal.get("segment");
-            String entireVideoEnd = (String) entireVideoSegment.get("endTimeOffset");
+            String entireVideoEnd = (String) entireVideoSegment.get("end_time_offset");
             finalTimeRangeList = processTimeFrameList(initialTimeRangeList, entireVideoEnd);
 
 

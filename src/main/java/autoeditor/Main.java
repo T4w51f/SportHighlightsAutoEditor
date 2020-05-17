@@ -14,6 +14,7 @@ import javafx.stage.StageStyle;
 import lombok.Getter;
 
 import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,9 +73,12 @@ public class Main extends Application {
         user32.SetWindowLong(hwnd, GWL_STYLE, newStyle);
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, GeneralSecurityException, InterruptedException {
         //launch(args);
         //TODO: Ahnaf run this
-        VideoIntelligenceResponseParser.gcpVidTool();
+        //VideoIntelligenceResponseParser.gcpVidTool();
+        ArrayList<TimeFrame> result = VideoIntelligenceResponseParser.processVideo();
+
+        System.out.println(result);
     }
 }
