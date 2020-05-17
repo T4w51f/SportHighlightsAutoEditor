@@ -1,28 +1,51 @@
 package autoeditor;
 
 import com.squareup.okhttp.*;
+import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class VideoIntelligenceResponseParser {
     public static ArrayList<TimeFrame> processVideo(String AbsoluteInputFilePath, String inputFileName, String storageFileName) throws IOException, InterruptedException {
+        System.out.println("Initiated video processing");
+
         String bucket = "videoattempt1";
         String hashedStorageName = storageFileName + (AbsoluteInputFilePath + storageFileName).hashCode() + String.valueOf(Math.round(999999 * Math.random()));
         int responseCode = 404;
         Response getBucketItem;
 
         uploadInputVideo(AbsoluteInputFilePath, bucket, hashedStorageName);
-        Response annotationOperation = postAnnotationRequest(inputFileName, hashedStorageName);
+
+        System.out.println("Uploading input video:");
 
         do {
-            getBucketItem = getBucketResponse(bucket, hashedStorageName);
+            System.out.print(".");
+            getBucketItem = getBucketResponse(bucket, hashedStorageName, ".mp4");
             responseCode = getBucketItem.code();
             Thread.sleep(5000);
         } while (responseCode != 200);
+
+        System.out.println("");
+        System.out.println("Upload complete!");
+
+        Response annotationOperation = postAnnotationRequest(inputFileName, hashedStorageName);
+
+        System.out.println("Checking for annotated JSON on cloud storage:");
+
+        do {
+            System.out.print(".");
+            getBucketItem = getBucketResponse(bucket, hashedStorageName, ".json");
+            responseCode = getBucketItem.code();
+            Thread.sleep(5000);
+        } while (responseCode != 200);
+
+        System.out.println("");
+        System.out.println("JSON file found!");
 
 
         String mediaLinkResponse = getBucketItem.body().string();
@@ -39,18 +62,27 @@ public class VideoIntelligenceResponseParser {
     }
 
     public static void uploadInputVideo(String AbsoluteInputPath, String bucket, String storageFileName) throws IOException {
+        System.out.println("Uploading user input video to cloud storage");
+
+        FileInputStream fileInputStream = new FileInputStream(AbsoluteInputPath);
+        byte [] fileByteArr = IOUtils.toByteArray(fileInputStream);
+
+
         OkHttpClient client = new OkHttpClient();
-        MediaType mediaType = MediaType.parse("application/octet-stream,text/plain");
-        RequestBody body = RequestBody.create(mediaType, "@" + AbsoluteInputPath);
+        MediaType mediaType = MediaType.parse("video/mp4,video/mp4");
+        RequestBody body = RequestBody.create(mediaType, fileByteArr);
         Request request = new Request.Builder()
                 .url("https://storage.googleapis.com/upload/storage/v1/b/"+bucket+"/o?uploadType=media&name="+storageFileName+".mp4")
                 .method("POST", body)
-                .addHeader("Content-Type", "application/octet-stream")
+                .addHeader("Content-Type", "video/mp4")
+                .addHeader("Content-Type", "video/mp4")
                 .build();
         Response response = client.newCall(request).execute();
     }
 
     public static Response postAnnotationRequest(String inputFile, String outputFile) throws IOException {
+        System.out.println("Requesting Google Video Intelligence API to process the input video");
+
         OkHttpClient client = new OkHttpClient();
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType, "{\"inputUri\": \"gs://videoattempt1/"+inputFile+"\",\"outputUri\": \"gs://videoattempt1/"+outputFile+".json\",\"features\": [\"LABEL_DETECTION\"]}");
@@ -63,10 +95,10 @@ public class VideoIntelligenceResponseParser {
         return response;
     }
 
-    public static Response getBucketResponse(String bucket, String object) throws IOException {
+    public static Response getBucketResponse(String bucket, String object, String fileExtension) throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .url("https://storage.googleapis.com/storage/v1/b/"+bucket+"/o/"+object)
+                .url("https://storage.googleapis.com/storage/v1/b/"+bucket+"/o/"+object+fileExtension)
                 .method("GET", null)
                 .build();
         Response response = client.newCall(request).execute();
@@ -74,6 +106,7 @@ public class VideoIntelligenceResponseParser {
     }
 
     public static Response getLabelResponse(String mediaLink) throws IOException {
+        System.out.println("Collecting the annotated time frame results from the video analysis");
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(mediaLink)
@@ -85,10 +118,13 @@ public class VideoIntelligenceResponseParser {
     }
 
     public static ArrayList<TimeFrame> getTimeRanges(JSONObject jsonObject){
+        double REF_CONFIDENCE_LEVEL = 0.90;
+        System.out.println("Processing relevant time frames");
+        System.out.println("Confidence floor is set to " + String.valueOf(REF_CONFIDENCE_LEVEL));
+
         ArrayList<TimeFrame> initialTimeRangeList = new ArrayList<>();
         ArrayList<TimeFrame> finalTimeRangeList = new ArrayList<>();
         JSONParser parser = new JSONParser();
-        double REF_CONFIDENCE_LEVEL = 0.90;
         int FRAME_FACTOR = 5;
 
         try{
@@ -134,6 +170,7 @@ public class VideoIntelligenceResponseParser {
             e.printStackTrace();
         }
 
+        System.out.println("Returning time frame list for video modification");
         return finalTimeRangeList;
     }
 
