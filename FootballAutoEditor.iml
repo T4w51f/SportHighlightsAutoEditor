@@ -16,6 +16,19 @@
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" />
+        </SOURCES>
+        <jarDirectory url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" recursive="false" />
+        <jarDirectory url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
     <orderEntry type="library" name="Maven: com.google.cloud:google-cloud-storage:1.107.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:29.0-android" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:failureaccess:1.0.1" level="project" />
@@ -93,18 +106,5 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.3" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.3" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.14" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" />
-        </SOURCES>
-        <jarDirectory url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" recursive="false" />
-        <jarDirectory url="file://D:/openjfx-11.0.2_windows-x64_bin-sdk/lib" recursive="false" type="SOURCES" />
-      </library>
-    </orderEntry>
   </component>
 </module>

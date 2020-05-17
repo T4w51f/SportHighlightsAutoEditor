@@ -28,10 +28,13 @@ output directory
 --add-exports javafx.graphics/com.sun.glass.ui=ALL-UNNAMED
  ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Contributors
 
-Please make sure to update tests as appropriate. 
+We have three contributors for this project.
+
+1. Tawsif Hasan (https://github.com/T4w51f) who primarily worked on parsing Google Cloud's video annotation JSON and providing us a list of time frames to use
+2. Amr Almoallim (https://github.com/amrm3lm) who worked on trimming video according to the time frames provided and merging videos to generate highlights
+3. Ahnaf Ahsan (https://github.com/Ahnaf39) who worked on the UI of application and it interacting with the file explorer of the opersating system
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
