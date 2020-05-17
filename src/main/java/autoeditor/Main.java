@@ -11,11 +11,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
-import java.io.IOException;
-
 import lombok.Getter;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,8 +72,8 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) throws IOException {
-        launch(args);
+        //launch(args);
         //TODO: Ahnaf run this
-        //VideoIntelligenceResponseParser.gcpVidTool();
+        VideoIntelligenceResponseParser.gcpVidTool();
     }
 }
