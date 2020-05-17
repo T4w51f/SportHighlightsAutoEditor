@@ -1,11 +1,17 @@
 package autoeditor;
 
+import com.sun.glass.ui.Window;
+import com.sun.jna.Pointer;
+import com.sun.jna.platform.win32.User32;
+import com.sun.jna.platform.win32.WinDef;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
+import static com.sun.jna.platform.win32.WinUser.GWL_STYLE;
 
 public class Main extends Application {
 
@@ -35,10 +41,8 @@ public class Main extends Application {
         minimizeIconTray();
     }
 
-
-    //FIXME
     private static void minimizeIconTray(){
-        long lhwnd = com.sun.glass.ui.Window.getWindows().get(0).getNativeWindow();
+        long lhwnd = Window.getWindows().get(0).getNativeWindow();
         Pointer lpVoid = new Pointer(lhwnd);
         WinDef.HWND hwnd = new WinDef.HWND(lpVoid);
         final User32 user32 = User32.INSTANCE;
