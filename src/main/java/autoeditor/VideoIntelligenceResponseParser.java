@@ -9,17 +9,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class VideoIntelligenceResponseParser {
-    public static ArrayList<TimeFrame> processVideo() throws IOException, InterruptedException {
-        String inputFile = "videoplayback.mp4";
+    public static ArrayList<TimeFrame> processVideo(String AbsoluteInputFilePath, String inputFileName, String storageFileName) throws IOException, InterruptedException {
         String bucket = "videoattempt1";
-        String object = "gommennasa.json";
+        String hashedStorageName = storageFileName + (AbsoluteInputFilePath + storageFileName).hashCode() + String.valueOf(Math.round(999999 * Math.random()));
         int responseCode = 404;
         Response getBucketItem;
 
-        Response annotationOperation = postAnnotationRequest(inputFile, object);
+        uploadInputVideo(AbsoluteInputFilePath, bucket, hashedStorageName);
+        Response annotationOperation = postAnnotationRequest(inputFileName, hashedStorageName);
 
         do {
-            getBucketItem = getBucketResponse(bucket, object);
+            getBucketItem = getBucketResponse(bucket, hashedStorageName);
             responseCode = getBucketItem.code();
             Thread.sleep(5000);
         } while (responseCode != 200);
@@ -38,10 +38,22 @@ public class VideoIntelligenceResponseParser {
         return getTimeRanges(labelJson);
     }
 
+    public static void uploadInputVideo(String AbsoluteInputPath, String bucket, String storageFileName) throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        MediaType mediaType = MediaType.parse("application/octet-stream,text/plain");
+        RequestBody body = RequestBody.create(mediaType, "@" + AbsoluteInputPath);
+        Request request = new Request.Builder()
+                .url("https://storage.googleapis.com/upload/storage/v1/b/"+bucket+"/o?uploadType=media&name="+storageFileName+".mp4")
+                .method("POST", body)
+                .addHeader("Content-Type", "application/octet-stream")
+                .build();
+        Response response = client.newCall(request).execute();
+    }
+
     public static Response postAnnotationRequest(String inputFile, String outputFile) throws IOException {
         OkHttpClient client = new OkHttpClient();
         MediaType mediaType = MediaType.parse("application/json");
-        RequestBody body = RequestBody.create(mediaType, "{\"inputUri\": \"gs://videoattempt1/"+inputFile+"\",\"outputUri\": \"gs://videoattempt1/"+outputFile+"\",\"features\": [\"LABEL_DETECTION\"]}");
+        RequestBody body = RequestBody.create(mediaType, "{\"inputUri\": \"gs://videoattempt1/"+inputFile+"\",\"outputUri\": \"gs://videoattempt1/"+outputFile+".json\",\"features\": [\"LABEL_DETECTION\"]}");
         Request request = new Request.Builder()
                 .url("https://videointelligence.googleapis.com/v1/videos:annotate?key=AIzaSyAuqtvuB_tpDRE3PqjoZ78lYwWK5ij7Wmc")
                 .method("POST", body)
