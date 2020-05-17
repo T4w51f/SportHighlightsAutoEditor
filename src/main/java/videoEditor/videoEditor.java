@@ -44,8 +44,8 @@ public class videoEditor {
             String endVal = String.valueOf(sequences.get(i).getEndTime());
             String vNumber = "v"+String.valueOf(i);
             String aNumber = "a"+String.valueOf(i);
-            double FadeOutStart = sequences.get(i).getStartTime()-FADE_DURATION;
-            double FadeInStart = sequences.get(i).getEndTime();
+            double FadeOutStart = sequences.get(i).getEndTime()-FADE_DURATION;
+            double FadeInStart = sequences.get(i).getStartTime();
 
             String vFadeInStatement = "fade=t=in:st="+FadeInStart+":d="+FADE_DURATION;
             String vFadeOutStatement = "fade=t=out:st="+FadeOutStart+":d="+FADE_DURATION;
