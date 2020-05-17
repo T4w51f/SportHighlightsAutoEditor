@@ -13,6 +13,8 @@ import java.io.File;
 
 public class AutoEditorUIController {
     private boolean DEBUG = true;
+    public File outDir;
+    public File inFile;
 
     @FXML
     private ImageView minButton;
@@ -37,7 +39,7 @@ public class AutoEditorUIController {
         event.getSource();
         if (DEBUG) { System.out.println("A file is being selected as an input");}
         final FileChooser fc = new FileChooser();
-        File inFile = fc.showOpenDialog(Main.getPrimaryStage());
+        inFile = fc.showOpenDialog(Main.getPrimaryStage());
         if (inFile != null) {
             if (DEBUG) { System.out.println("A file has been selected as an input");}
             inputFileFlag = true;
@@ -50,7 +52,7 @@ public class AutoEditorUIController {
         event.getSource();
         if (DEBUG) { System.out.println("A file path is being selected as an output");}
         final DirectoryChooser dc = new DirectoryChooser();
-        File outDir = dc.showDialog(Main.getPrimaryStage());
+        outDir = dc.showDialog(Main.getPrimaryStage());
         if (outDir != null){
             if (DEBUG) { System.out.println("A file has been selected as an input"); }
             outputFilePathFlag = true;
