@@ -23,14 +23,57 @@
     <properties>
         <maven.compiler.source>11.0.7</maven.compiler.source>
         <maven.compiler.target>11.0.7</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.sun.jna/jna -->
+        <!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna -->
         <dependency>
-            <groupId>com.sun.jna</groupId>
+            <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
-            <version>3.0.9</version>
+            <version>5.5.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna -->
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna-platform</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.openjfx</groupId>-->
+<!--            <artifactId>javafx-controls</artifactId>-->
+<!--            <version>11.0.2</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.openjfx</groupId>-->
+<!--            <artifactId>javafx-fxml</artifactId>-->
+<!--            <version>11.0.2</version>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.cloud/google-cloud-video-intelligence -->
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-video-intelligence</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/ws.schild/jave-core -->
